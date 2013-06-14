@@ -422,6 +422,8 @@ article h3, h4{margin-top: 20px;}
     }
 }
 
+.cat {border: solid, yellow, 1px;}
+
 @media (max-width: 767px) {
     #header-background,
     #menu-background,
@@ -441,4 +443,6 @@ article h3, h4{margin-top: 20px;}
     #menu-background {
         background-color: #ffc907;
     }
+	
+img {
 }
