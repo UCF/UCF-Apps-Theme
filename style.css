@@ -45,6 +45,8 @@ select#UCFHBHeaderLinks {
 
 /* Site Styles */
 
+.unique{color: yellow;}
+
 .breadcrumb {
 	background-color: #ffffff;
     list-style: none outside none;
