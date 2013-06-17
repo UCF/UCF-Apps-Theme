@@ -7,14 +7,17 @@ Version: v1.0.0
 
 body {
     font-size: 15px;
-    line-height: 20px;
+    /*from 20 to 15 line hight*/
+    line-height: 15px;
 	background-color: black;
 	color: #99FF00;
 }
 
 /* UCF Header Styles!!! */
 /*Chris was here */
+/*Mitchell was here*/
 /*Git is cool */
+
 #UCFHBSearch_ucf fieldset #q {
 	line-height: 11px;
 	color: #000000;
