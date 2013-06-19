@@ -22,7 +22,7 @@
                                     <span class="footer-emphasize"><?= $options['organization_name']; ?></span>
                                     <br />
                                 <?php endif;?>
-                                <h3>Contact Us<h3>
+                                <h3>Contact Us</h3>
 								"                       SMCA: Strategy, Marketing, Communications & Admissions"
 								<br />
 								"                       12443 Research Parkway"
