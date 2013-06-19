@@ -56,6 +56,7 @@
 	                                </span>
 	                            	</div>
 	                            	<div class = "content-flow2">
+	                            		<h3>Resource Links</h3>
 		                            <ul>
 		                            	<li>	
 		                            		<a href="http://www.ucf.edu">UCF Home Page</a>
