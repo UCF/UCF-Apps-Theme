@@ -53,19 +53,19 @@
 	                                    &nbsp; | &nbsp;<a href="mailto:<?=$options['site_contact']?>"><?=$options['site_contact']?></a>
 	                                <?php endif; ?>
 	                                </span>
-	                            </div>
 	                            
-	                            <ul>
-	                            	<li>	
-	                            		<a href="http://www.ucf.edu">UCF Home Page</a>
-	                            	</li>
-	                            	<li>
-	                            		<a href="http://today.ucf.edu/">UCF Today</a>
-	                            	</li>
-	                            	<li>
-	                            		<a href="http://today.ucf.edu/">UCF Today</a>
-	                            	</li>
-	                            </ul>
+		                            <ul>
+		                            	<li>	
+		                            		<a href="http://www.ucf.edu">UCF Home Page</a>
+		                            	</li>
+		                            	<li>
+		                            		<a href="http://today.ucf.edu/">UCF Today</a>
+		                            	</li>
+		                            	<li>
+		                            		<a href="http://today.ucf.edu/">UCF Today</a>
+		                            	</li>
+		                            </ul>
+		                     </div>
                             	</div>
                         <?php endif;?>
                     </div>
