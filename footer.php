@@ -1,5 +1,5 @@
 			<div id = "footer-wrap">
-				<div id="footer" class="container">
+				<div id="footer">
 					<div class="row">
 						<div class="span12">
 					<?=wp_nav_menu(array(
@@ -14,7 +14,7 @@
 					?>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						
 							<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
 								<?php $options = get_option(THEME_OPTIONS_NAME);?>
