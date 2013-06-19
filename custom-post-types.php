@@ -246,7 +246,7 @@ abstract class CustomPostType{
 class ResourceLink extends CustomPostType{
     public
         $name           = 'resourcelink',
-        $plural_name    = 'Resource Links',
+        $plural_name    = 'Media Links', /*Changing from Resource Links to Media Links -Mitchell */
         $singular_name  = 'Resource Link',
         $add_new_item   = 'Add New Resource Link',
         $edit_item      = 'Edit Resource Link',
