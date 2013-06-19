@@ -54,6 +54,18 @@
 	                                <?php endif; ?>
 	                                </span>
 	                            </div>
+	                            
+	                            <ul>
+	                            	<li>	
+	                            		<a href="http://www.ucf.edu">UCF Home Page</a>
+	                            	</li>
+	                            	<li>
+	                            		<a href="http://today.ucf.edu/">UCF Today</a>
+	                            	</li>
+	                            	<li>
+	                            		<a href="http://today.ucf.edu/">UCF Today</a>
+	                            	</li>
+	                            </ul>
                             	</div>
                         <?php endif;?>
                     </div>
