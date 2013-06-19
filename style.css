@@ -159,7 +159,7 @@ select#UCFHBHeaderLinks {
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
 
-#footer-wrap{background-color: #444; height: 125px;}
+#footer-wrap{background-color: #707070; height: 125px;}
 #footer-wrap div {display: block;}
 #footer {color: #000; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-align: center; margin: 10px auto 0px auto; padding: 10px 0px 25px 20px; width: 940px;}
 #footer-menu li {float: none;}
