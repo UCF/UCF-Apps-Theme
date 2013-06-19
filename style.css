@@ -161,7 +161,7 @@ select#UCFHBHeaderLinks {
 
 #footer-wrap{background-color: #444; height: 125px;}
 #footer-wrap div {display: block;}
-#footer {color: #000; font-size: 14px; font-family: Helvetica, Arial, sans-serif; text-align: center; margin: 10px auto 0px auto; padding: 10px 0px 25px 20px; width: 940px;}
+#footer {color: #000; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-align: center; margin: 10px auto 0px auto; padding: 10px 0px 25px 20px; width: 940px;}
 #footer-menu li {float: none;}
 #footer a {color: #000; font-size: 11px; font-family: Helvetica, Arial, sans-serif;}
 #footer-menu li:after {content: "|";}
@@ -173,7 +173,7 @@ select#UCFHBHeaderLinks {
 #footer .info .copyright{margin-top: 1em;}
 #footer .footer-emphasize {font-weight: bold;}
 #footer img {float:left;}
-.content-flow {}
+#footer .content-flow {float:left; margin-left: 5%;}
 
 #below-the-fold{margin-top: 2em; padding-top: 1em;border-top: 1px dotted #666;}
 #below-the-fold h2{font-size: 18px; margin: 0 0 1em 0; padding: 0;}
