@@ -246,8 +246,8 @@ abstract class CustomPostType{
 class ResourceLink extends CustomPostType{
     public
         $name           = 'resourcelink',
-        $plural_name    = 'Media Links', /*Changing from Resource Links to Media Links -Mitchell */
-        $singular_name  = 'Resource Link',
+        $plural_name    = 'Navigation', /*Changing from Resource Links to Navigation -Mitchell */
+        $singular_name  = 'Menu Links',
         $add_new_item   = 'Add New Resource Link',
         $edit_item      = 'Edit Resource Link',
         $new_item       = 'New Resource Link',
@@ -256,7 +256,7 @@ class ResourceLink extends CustomPostType{
         $use_order      = True,
         $use_shortcode  = True,
         $use_metabox    = True,
-        $taxonomies     = array('post_tag', 'pg_sections');
+        $taxonomies     = array('post_tag', 'Menu Sections');
 
     public static function get_page_dropdown() {
         $args = array(
