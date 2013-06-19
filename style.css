@@ -175,8 +175,6 @@ select#UCFHBHeaderLinks {
 #footer h3 {color: #fcd057; font-family: georgia, serif; font-size: 1.25em; line-height: 40px; font-weight: 200; margin-top: 0; padding-top: 0; margin-bottom: 2px;}
 .footerspan1{float: left; display: block; width: 23%;}
 .footerspan2{float: left; display: block; width: 32%;}
-.row-fluid{width: 100%;  }
-.row-fluid:before, .row-fluid:after{display: table; line-height: 0; content:"";}
 
 
 

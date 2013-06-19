@@ -1,5 +1,5 @@
 			<div id = "footer-wrap">
-				<div id="footer">
+				<div id="footer" class = "container">
 					<div class="row">
 						<div class="span12">
 					<?=wp_nav_menu(array(
