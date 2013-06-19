@@ -175,6 +175,7 @@ select#UCFHBHeaderLinks {
 #footer img {float:left;}
 #footer .content-flow {float:left; margin-left: 5%;}
 #footer .content-flow2 {float:left; margin-left: 5%; text-align: left; line-height: 14pt;}
+#footer h3 {color: #FFC904;}
 
 #below-the-fold{margin-top: 2em; padding-top: 1em;border-top: 1px dotted #666;}
 #below-the-fold h2{font-size: 18px; margin: 0 0 1em 0; padding: 0;}
