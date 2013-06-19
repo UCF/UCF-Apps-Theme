@@ -23,6 +23,7 @@
                                     <br />
                                 <?php endif;?>
 								
+								<img src = "res/img/50th-220x80.png" alt="ucf logo">
 								<div>
 									<h3>Contact Us</h3>
 									SMCA: Strategy, Marketing, Communications & Admissions
