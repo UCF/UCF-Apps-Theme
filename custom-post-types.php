@@ -243,7 +243,7 @@ abstract class CustomPostType{
 	}
 }
 
-class Navigation extends CustomPostType{
+class ResourceLinks extends CustomPostType{
     public
         $name           = 'Menu Links',
         $plural_name    = 'Navigation', /*Changing from Resource Links to Navigation -Mitchell */
@@ -394,7 +394,7 @@ class Navigation extends CustomPostType{
         <ul class="nobullet <?php if($css_classes):?><?=$css_classes?><?php else:?><?=$class->options('name')?>-list<?php endif;?>">
             <?php foreach($objects as $o): $url = ResourceLink::get_url($o);?>
                 <a href="<?=$url; ?>">
-                <li class="Navigation <?=$class_name::get_document_application($o)?>">
+                <li class="ResourceLinks <?=$class_name::get_document_application($o)?>">
                     <i class="icon-circle-arrow-right"></i> <?=$class->get_title($o)?>
                 </li>
                 </a>
@@ -410,9 +410,9 @@ class Navigation extends CustomPostType{
      * Outputs this item in HTML.  Can be overridden for descendants.
      **/
     public function toHTML($object){
-        $title    = Navigation::get_title($object);
-        $url      = Navigation::get_url($object);
-        $linktype = Navigation::get_document_application($object);
+        $title    = ResourceLinks::get_title($object);
+        $url      = ResourceLinks::get_url($object);
+        $linktype = ResourceLinks::get_document_application($object);
         $html = "<a href='{$url}'>{$title}</a>";
         return $html;
     }
