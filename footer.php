@@ -16,54 +16,53 @@
 					</div>
 					
 						
-							<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
-								<?php $options = get_option(THEME_OPTIONS_NAME);?>
-								<div class = "footerspan1">
-									<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
-								</div>
-									
-										<div id="footer-info">
-											
-											<?php if($options['organization_name']): ?>
-												<span class="footer-emphasize"><?= $options['organization_name']; ?></span>
-												<br />
-												University of Central Florida
-												<br />
-											<?php endif;?>
-								
-											
-											<?php if ($options['organization_name'] and $options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
-												<?=$options['street_address'];?>
-												<br />
-												<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
-												<br />
-											<?php elseif($options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
-												<?=$options['street_address'];?>
-												<br />
-												<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
-												<br />
-											<?php endif;?>
-											<span class="footer-emphasize">
-											<?php if($options['phone_number'] and $options['fax_number']): ?>
-												<br />Phone: <?=$options['phone_number'];?> | Fax: <?=$options['fax_number'];?>
-											<?php elseif($options['phone_number'] and !$options['fax_number']): ?>
-												<br /><?=$options['phone_number'];?>
-											<?php elseif(!$options['phone_number'] and $options['fax_number']): ?>
-												<br />Fax: <?=$options['fax_number'];?>
-											<?php endif; ?>
-											</span>
-
-											<span class="footer-emphasize">
-											<?php if($options['site_contact']): ?>
-												&nbsp; | &nbsp;<a href="mailto:<?=$options['site_contact']?>"><?=$options['site_contact']?></a>
-											<?php endif; ?>
-											</span>
-											
-										</div>
-										
-							<?php endif;?>
+					<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
+						<?php $options = get_option(THEME_OPTIONS_NAME);?>
+						<div class = "footerspan1">
+							<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
+						</div>
 						
+						<div class = "footerspan2">
+							<div id="footer-info">
+									
+								<?php if($options['organization_name']): ?>
+									<span class="footer-emphasize"><?= $options['organization_name']; ?></span>
+									<br />
+									University of Central Florida
+									<br />
+								<?php endif;?>
 					
+								
+								<?php if ($options['organization_name'] and $options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
+									<?=$options['street_address'];?>
+									<br />
+									<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
+									<br />
+								<?php elseif($options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
+									<?=$options['street_address'];?>
+									<br />
+									<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
+									<br />
+								<?php endif;?>
+								<span class="footer-emphasize">
+								<?php if($options['phone_number'] and $options['fax_number']): ?>
+									<br />Phone: <?=$options['phone_number'];?> | Fax: <?=$options['fax_number'];?>
+								<?php elseif($options['phone_number'] and !$options['fax_number']): ?>
+									<br /><?=$options['phone_number'];?>
+								<?php elseif(!$options['phone_number'] and $options['fax_number']): ?>
+									<br />Fax: <?=$options['fax_number'];?>
+								<?php endif; ?>
+								</span>
+
+								<span class="footer-emphasize">
+								<?php if($options['site_contact']): ?>
+									&nbsp; | &nbsp;<a href="mailto:<?=$options['site_contact']?>"><?=$options['site_contact']?></a>
+								<?php endif; ?>
+								</span>
+									
+							</div>
+						</div>	
+					<?php endif;?>
 				</div>
 			</div>	
 		</div><!-- container -->
