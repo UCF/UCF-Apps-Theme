@@ -22,6 +22,7 @@
                                     <span class="footer-emphasize"><?= $options['organization_name']; ?></span>
                                     <br />
 									University of Central Florida
+									<br />
                                 <?php endif;?>
 					
 								
