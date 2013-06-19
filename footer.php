@@ -14,7 +14,7 @@
 					?>
 						</div>
 					</div>
-					<div class="row-fluid">
+					
 						
 							<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
 								<?php $options = get_option(THEME_OPTIONS_NAME);?>
@@ -63,7 +63,7 @@
 										
 							<?php endif;?>
 						
-					</div>
+					
 				</div>
 			</div>	
 		</div><!-- container -->
