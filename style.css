@@ -167,7 +167,7 @@ select#UCFHBHeaderLinks {
 #footer-menu li:after {content: "|";}
 #footer-widget-wrap { margin-top: 16px; }
 #footer .ucf{}
-#footer .info{position: absolute; top: -10px;}
+#footer .info{position: relative; top: -10px;}
 #footer .info,
 #footer .info a{line-height: 1.5em; text-align: right; font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; font-weight: normal; font-size: 14px;}
 #footer .info .copyright{margin-top: 1em;}
@@ -175,6 +175,7 @@ select#UCFHBHeaderLinks {
 #footer h3 {color: #fcd057; font-family: georgia, serif; font-size: 1.25em; line-height: 40px; font-weight: 200; margin-top: 0; padding-top: 0; margin-bottom: 2px;}
 .footerspan1{float: left; display: block; width: 23%;}
 .footerspan2{float: left; display: block; width: 32%;}
+.centerContent{position: absolute;}
 
 
 #below-the-fold{margin-top: 2em; padding-top: 1em;border-top: 1px dotted #666;}
