@@ -1,3 +1,4 @@
+		<div id = "footer-wrap">	
 			<div id="footer" class="container">
 				<div class="row">
                     <div class="span12">
@@ -55,6 +56,7 @@
                         <?php endif;?>
                     </div>
                 </div>
+                	</div>
 			</div>
 		</div><!-- container -->
 	</body>
