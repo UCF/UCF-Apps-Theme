@@ -171,7 +171,7 @@ select#UCFHBHeaderLinks {
 #footer .info,
 #footer .info a{line-height: 1.5em; text-align: right; font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; font-weight: normal; font-size: 14px;}
 #footer .info .copyright{margin-top: 1em;}
-#footer .footer-emphasize {font-weight: bold;}
+#footer .footer-emphasize {font-weight: bold; color: #FFC904;}
 #footer img {float:left;}
 #footer .content-flow {float:left; margin-left: 5%;}
 
