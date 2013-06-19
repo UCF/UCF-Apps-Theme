@@ -21,6 +21,7 @@
 								<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
                             </div>
 							<div id="footer-info">
+								<div class = "footerspan2">
                                 <?php if($options['organization_name']): ?>
                                     <span class="footer-emphasize"><?= $options['organization_name']; ?></span>
                                     <br />
@@ -55,6 +56,7 @@
                                     &nbsp; | &nbsp;<a href="mailto:<?=$options['site_contact']?>"><?=$options['site_contact']?></a>
                                 <?php endif; ?>
                                 </span>
+								</div>
                             </div>
                         <?php endif;?>
                     </div>
