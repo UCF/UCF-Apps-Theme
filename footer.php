@@ -22,15 +22,18 @@
                                     <span class="footer-emphasize"><?= $options['organization_name']; ?></span>
                                     <br />
                                 <?php endif;?>
-                                <h3>Contact Us</h3>
-								"                       SMCA: Strategy, Marketing, Communications & Admissions"
-								<br />
-								"                       12443 Research Parkway"
-								<br />
-								"                       Suite 301 - Orlando, Florida 32826-3252"
-								<br />
-								<br />
-								"Phone: 407-823-3000 | Fax: 407-823-2567
+								
+								<div>
+									<h3>Contact Us</h3>
+									SMCA: Strategy, Marketing, Communications & Admissions
+									<br />
+									12443 Research Parkway
+									<br />
+									Suite 301 - Orlando, Florida 32826-3252
+									<br />
+									<br />
+									Phone: 407-823-3000 | Fax: 407-823-2567
+								</div>
 								
                                 <?php if ($options['organization_name'] and $options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
                                     <?=$options['street_address'];?>
