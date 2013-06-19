@@ -173,7 +173,7 @@ select#UCFHBHeaderLinks {
 #footer .info .copyright{margin-top: 1em;}
 #footer .footer-emphasize {font-weight: bold;}
 #footer h3 {color: #fcd057; font-family: georgia, serif; font-size: 1.25em; line-height: 40px; font-weight: 200; margin-top: 0; padding-top: 0; margin-bottom: 2px;}
-.footerspan1{width: 23%;}
+.footerspan1{width: 23%; margin-left: 0;}
 .footerspan2{width: 32%;}
 
 
