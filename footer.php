@@ -21,7 +21,7 @@
 								<div class = "footerspan1">
 									<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
 								</div>
-									<div class = "centerContent">
+									
 										<div id="footer-info">
 											
 											<?php if($options['organization_name']): ?>
@@ -60,7 +60,7 @@
 											</span>
 											
 										</div>
-									</div>	
+										
 							<?php endif;?>
 						
 					</div>
