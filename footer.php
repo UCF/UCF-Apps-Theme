@@ -19,8 +19,9 @@
                         <?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
                             <?php $options = get_option(THEME_OPTIONS_NAME);?>
 							<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
-				<div class = "content-flow">				
+								
 	                            <div id="footer-info">
+	                            <div class = "content-flow">
 	                                <?php if($options['organization_name']): ?>
 	                                    <span class="footer-emphasize"><?= $options['organization_name']; ?></span>
 	                                    <br />
@@ -66,6 +67,7 @@
 		                            		<a href="http://today.ucf.edu/">UCF Today</a>
 		                            	</li>
 		                            </ul>
+		                     
 		                     </div>
                             	</div>
                         <?php endif;?>
