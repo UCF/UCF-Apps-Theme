@@ -53,7 +53,8 @@
 	                                    &nbsp; | &nbsp;<a href="mailto:<?=$options['site_contact']?>"><?=$options['site_contact']?></a>
 	                                <?php endif; ?>
 	                                </span>
-	                            
+	                            	</div>
+	                            	<div class = "content-flow2">
 		                            <ul>
 		                            	<li>	
 		                            		<a href="http://www.ucf.edu">UCF Home Page</a>
