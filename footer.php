@@ -17,8 +17,10 @@
                     <div class="span12">
                         <?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
                             <?php $options = get_option(THEME_OPTIONS_NAME);?>
-							<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
-                            <div id="footer-info">
+							<div class = "footerspan1">
+								<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
+                            </div>
+							<div id="footer-info">
                                 <?php if($options['organization_name']): ?>
                                     <span class="footer-emphasize"><?= $options['organization_name']; ?></span>
                                     <br />
