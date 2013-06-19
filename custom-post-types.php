@@ -256,7 +256,7 @@ class ResourceLink extends CustomPostType{
         $use_order      = True,
         $use_shortcode  = True,
         $use_metabox    = True,
-        $taxonomies     = array('post_tag', 'Menu Sections');
+        $taxonomies     = array('post_tag', 'pg_sections');
 
     public static function get_page_dropdown() {
         $args = array(
