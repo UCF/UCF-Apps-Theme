@@ -243,14 +243,14 @@ abstract class CustomPostType{
 	}
 }
 
-class ResourceLink extends CustomPostType{
+class Navigation extends CustomPostType{
     public
         $name           = 'Menu Links',
         $plural_name    = 'Navigation', /*Changing from Resource Links to Navigation -Mitchell */
         $singular_name  = 'Menu Links',
-        $add_new_item   = 'Add New Resource Link',
-        $edit_item      = 'Edit Resource Link',
-        $new_item       = 'New Resource Link',
+        $add_new_item   = 'Add New Navigation',
+        $edit_item      = 'Edit Navigation',
+        $new_item       = 'New Navigation',
         $use_title      = True,
         $use_editor     = False,
         $use_order      = True,
@@ -394,7 +394,7 @@ class ResourceLink extends CustomPostType{
         <ul class="nobullet <?php if($css_classes):?><?=$css_classes?><?php else:?><?=$class->options('name')?>-list<?php endif;?>">
             <?php foreach($objects as $o): $url = ResourceLink::get_url($o);?>
                 <a href="<?=$url; ?>">
-                <li class="resource-link <?=$class_name::get_document_application($o)?>">
+                <li class="Navigation <?=$class_name::get_document_application($o)?>">
                     <i class="icon-circle-arrow-right"></i> <?=$class->get_title($o)?>
                 </li>
                 </a>
@@ -410,9 +410,9 @@ class ResourceLink extends CustomPostType{
      * Outputs this item in HTML.  Can be overridden for descendants.
      **/
     public function toHTML($object){
-        $title    = ResourceLink::get_title($object);
-        $url      = ResourceLink::get_url($object);
-        $linktype = ResourceLink::get_document_application($object);
+        $title    = Navigation::get_title($object);
+        $url      = Navigation::get_url($object);
+        $linktype = Navigation::get_document_application($object);
         $html = "<a href='{$url}'>{$title}</a>";
         return $html;
     }
