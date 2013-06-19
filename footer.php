@@ -15,7 +15,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="centerContent">
+						
 							<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
 								<?php $options = get_option(THEME_OPTIONS_NAME);?>
 								<div class = "footerspan1">
@@ -60,7 +60,7 @@
 									
 								</div>
 							<?php endif;?>
-						</div>
+						
 					</div>
 				</div>
 			</div>	
