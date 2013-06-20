@@ -75,7 +75,7 @@ abstract class CustomTaxonomy {
 				'show_in_nav_menus'     => $this->options('show_in_nav_menus'),
 				'show_ui'               => $this->options('show_ui'),
 				'show_tagcloud'         => $this->options('show_tagcloud'),
-				'hierarchical'          = True,
+				'hierarchical'          => True,
 				//=> $this->options('hierarchical'),
 				'update_count_callback' => $this->options('update_count_callback'),
 				'rewrite'               => $this->options('rewrite'),
