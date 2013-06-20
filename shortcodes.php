@@ -272,8 +272,8 @@ function sc_post_type_search($params=array(), $content='') {
 		// if a specific taxonomy term is specified, get just its children
 		$termchildren = get_term_children(get_term_by('slug', $params['taxonomy_term'], $params['taxonomy'])->term_id, $params['taxonomy']);
 
-		//$termchildren_byname = array();
-		//$termchildren_sorted = array();
+		$termchildren_byname = array();
+		$termchildren_sorted = array();
 
 		// Create new array that contains term ID and Name data per term
 		foreach ($termchildren as $termid) {
