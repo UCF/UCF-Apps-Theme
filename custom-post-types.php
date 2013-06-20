@@ -178,7 +178,8 @@ abstract class CustomPostType{
 		);
 
 		if ($this->options('use_order')){
-			$registration = array_merge($registration, array('hierarchical' => False,));
+			hierarchial = False;
+			//$registration = array_merge($registration, array('hierarchical' => False,));
 		}
 
 		register_post_type($this->options('name'), $registration);
