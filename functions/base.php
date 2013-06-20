@@ -303,7 +303,7 @@ class CheckboxField extends ChoicesField{
 			<?php endforeach;?>
 		</ul>
 		<?php
-		return ob_get_clean();
+	//	return ob_get_clean();
 	}
 }
 
