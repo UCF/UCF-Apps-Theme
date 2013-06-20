@@ -132,6 +132,7 @@ select#UCFHBHeaderLinks {
 
 /*#home .site-image img{display: block; margin: 0; border: 5px solid #fff;}*/
 #home .description{font-size: 16px; font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";}
+#home h2{color:gold;}
 #home .content p,
 #home .description p{font-size: inherit;}
 #home .description p {line-height:1em;}
