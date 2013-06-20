@@ -63,7 +63,7 @@
 	                            			list-style: none;
 	                            		}
 	                            		</style>
-		                            		<ul>
+		                            		<ul style = "list-style: none;">
 		                            		
 		                            		<li><a href="http://www.ucf.edu">UCF Home Page</a></li>
 		                            		
