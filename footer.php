@@ -57,14 +57,16 @@
 	                            	</div>
 	                            	<div class = "content-flow2">
 	                            		<h4>Resource Links</h4>	
-		                            		<a href="http://www.ucf.edu">UCF Home Page</a>
-		                            		<br>
+		                            		<ul>
+		                            		
+		                            		<li><a href="http://www.ucf.edu">UCF Home Page</a></li>
+		                            		
 		                        
-		                            		<a href="http://today.ucf.edu/">UCF Today</a>
-		                            		<br>
+		                            		<li><a href="http://today.ucf.edu/">UCF Today</a></li>
+		                            		
 		                            
-		                            		<a href="http://today.ucf.edu/">UCF Today</a>
-		                            		<br>
+		                            		<li><a href="http://today.ucf.edu/">UCF Today</a></li
+		                            		</ul>
 		                     </div>
                             	</div>
                         <?php endif;?>
