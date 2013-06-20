@@ -58,7 +58,7 @@
 	                            	<div class = "content-flow2">
 	                            		<h4>Resource Links</h4>	
 	                            		<style>
-	                            		<li a>
+	                            		<ul>
 	                            		{
 	                            			list-style: none;
 	                            		}
