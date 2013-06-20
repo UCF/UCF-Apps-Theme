@@ -69,7 +69,7 @@ textarea{padding: 4px; color: #333; border: 1px solid #ccc; -webkit-border-radiu
 #header h1 a:hover{color: #ed1c24; text-decoration: underline;}
 #header{border-bottom: 1px dotted #666; padding-bottom: 8px;}
 #header-menu{margin-bottom: 16px;}
-#sidebar {border:10px solid #000000;}
+#sidebar {border:1px solid #000000;}
 #sidebar h2{margin: .5em 0 1em 0; font-size: 17px; color:#000;}
 #footer{border-top: 1px dotted #666; padding-top: 0px; margin: 10px 0 20px 0;}
 #footer-menu { clear: right; }
