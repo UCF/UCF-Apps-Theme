@@ -48,7 +48,7 @@ textarea{padding: 4px; color: #333; border: 1px solid #ccc; -webkit-border-radiu
 /**
  * Location specific styles
  **/
-#h2 {color: gold;}
+#home h2 {color: gold;}
 #search-results .more{clear: both;}
 #search-results .result-list{padding: 0; margin: 0;}
 #search-results .result-list li{list-style-type: none; word-wrap: break-word;}
