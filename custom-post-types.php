@@ -246,7 +246,7 @@ abstract class CustomPostType{
 class ResourceLink extends CustomPostType{
     public
         $name           = 'resourcelink',
-        $plural_name    = 'Navigation',
+        $plural_name    = 'Menu Links',
         $singular_name  = 'Menu Links',
         $add_new_item   = 'Add New Menu Link',
         $edit_item      = 'Edit Menu Link',
