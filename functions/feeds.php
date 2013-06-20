@@ -288,11 +288,6 @@ function display_events($header='h2'){?>
             <div id="more_events" class="span12"><a href="<?=$options['events_url'];?>">More Events ...</a></div>
         </div>
 	<?php else:?>
-        <div class="row">
-            <div class="span12">
-                <p>Unable to fetch events</p>
-            </div>
-        </div>
 	<?php endif;?>
 <?php
 }
