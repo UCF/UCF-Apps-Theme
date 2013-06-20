@@ -120,17 +120,17 @@ class PgSections extends CustomTaxonomy
 {
 	public
 		$name               = 'pg_sections',
-		$general_name       = 'Page Sections',
-		$singular_name      = 'Page Section',
-		$search_items       = 'Search Page Sections',
-		$popular_items      = 'Popular Page Sections',
-		$all_times          = 'All Page Sections',
-		$parent_item        = 'Parent Page Section',
-		$parent_item_colon  = 'Parent Page Section:',
-		$edit_item          = 'Edit Page Section',
-		$update_item        = 'Update Page Section',
-		$add_new_item       = 'Add New Page Section',
-		$new_item_name      = 'New Tag Page Section',
+		$general_name       = 'Menu Sections',
+		$singular_name      = 'Menu Section',
+		$search_items       = 'Search Menu Sections',
+		$popular_items      = 'Popular Menu Sections',
+		$all_times          = 'All Menu Sections',
+		$parent_item        = 'Parent Menu Section',
+		$parent_item_colon  = 'Parent Menu Section:',
+		$edit_item          = 'Edit Menu Section',
+		$update_item        = 'Update Menu Section',
+		$add_new_item       = 'Add New Menu Section',
+		$new_item_name      = 'New Tag Menu Section',
 
 		$hierarchical = True;
 } // END class 
