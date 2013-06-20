@@ -9,10 +9,8 @@ body {
     font-size: 15px;
     /*from 20 to 15 line hight*/
     line-height: 15px;
-    	/*bg color from black to white -Mitchell */
 	background-color: #fff;
-	/*text color from light green to gold*/
-	color: #FFC904;
+	color: #000;
 }
 
 /* UCF Header Styles!! */
