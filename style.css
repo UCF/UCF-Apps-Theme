@@ -19,7 +19,7 @@ body {
 /*Git is cool */
 
 #UCFHBSearch_ucf fieldset #q {
-	line-height: 40px;
+	line-height: 11px;
 	color: #000000;
 	padding: 2px!important;
 	font-size: 11px;
@@ -152,7 +152,7 @@ select#UCFHBHeaderLinks {
 #header .social.menu.horizontal li:after{content: "";}
 
 #menu-background{background-color: #fdde60;}
-#header-menu a {color: #000; font-size: 13px; font-family: Helvetica, Arial, sans-serif;}
+#header-menu a {color: #000; font-size: 15px; font-family: Helvetica, Arial, sans-serif;}
 #header-menu {margin-top: 5px;}
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
