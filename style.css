@@ -265,9 +265,7 @@ select#UCFHBHeaderLinks {
 .home-link .home-link-desc{font-family: Georgia, Times, "Times New Roman", serif; font-weight: normal; font-size: 14px;}
 
 .resourcelink-list {margin-left: 0;}
-/*Resource link from #fff6d2 to #fff -Mitchell */
 .resourcelink-list .resource-link{display: block; background-color: #fff; padding: 5px; margin-top: 5px;}
-/*Resource link color from #000 (black) to #0f00ff (blue) -Mitchell */
 .resourcelink-list a{ color: #0f00ff;}
 
 #header h1 a {font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif;}
