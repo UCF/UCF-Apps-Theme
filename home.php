@@ -52,14 +52,4 @@
             <?php endif; ?>
         </div>
     </div>
-    <div id="events-header" class="wide">
-        <div class="container">
-            <div class="row">
-                <div class="span12"></div>
-            </div>
-        </div>
-    </div>
-    <div id="events" class="container">
-        <?php get_template_part('includes/below-the-fold'); ?>
-    </div>
 <?php get_footer();?>
