@@ -56,19 +56,15 @@
 	                                </span>
 	                            	</div>
 	                            	<div class = "content-flow2">
-	                            		<h4>Resource Links</h4>
-		                            <ul>
-		                            	<li>	
+	                            		<h4>Resource Links</h4>	
 		                            		<a href="http://www.ucf.edu">UCF Home Page</a>
-		                            	</li>
-		                            	<li>
+		                            		<br>
+		                        
 		                            		<a href="http://today.ucf.edu/">UCF Today</a>
-		                            	</li>
-		                            	<li>
+		                            		<br>
+		                            
 		                            		<a href="http://today.ucf.edu/">UCF Today</a>
-		                            	</li>
-		                            </ul>
-		                     
+		                            		<br>
 		                     </div>
                             	</div>
                         <?php endif;?>
