@@ -57,13 +57,9 @@
 	                            	</div>
 	                            	<div class = "content-flow2">
 	                            		<h4>Resource Links</h4>	
-	                            		<style>
 	                            		<ul>
-	                            		{
-	                            			list-style: none;
-	                            		}
-	                            		</style>
-		                            		<ul style = "list-style: none;">
+	                            	
+		                            		<ul>
 		                            		
 		                            		<li><a href="http://www.ucf.edu">UCF Home Page</a></li>
 		                            		
