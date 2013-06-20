@@ -177,11 +177,11 @@ abstract class CustomPostType{
 			'_builtin'   => $this->options('built_in')
 		);
 
-	//	if ($this->options('use_order')){
-//			$registration = array_merge($registration, array('hierarchical' => False,));
+		if ($this->options('use_order')){
+			$registration = array_merge($registration, array('hierarchical' => False,));
 		}
 
-//		register_post_type($this->options('name'), $registration);
+		register_post_type($this->options('name'), $registration);
 
 		if ($this->options('use_shortcode')){
 			add_shortcode($this->options('name').'-list', array($this, 'shortcode'));
