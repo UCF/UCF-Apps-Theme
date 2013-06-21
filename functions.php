@@ -69,6 +69,7 @@ class Category_Checklist {
 	// Scrolls to first checked category
 	function script() {
 ?>
+<!--
 <script type="text/javascript">
 	jQuery(function(){
 		jQuery('[id$="-all"] > ul.categorychecklist').each(function() {
@@ -85,6 +86,7 @@ class Category_Checklist {
 		});
 	});
 </script>
+-->
 <?php
 	}
 }
