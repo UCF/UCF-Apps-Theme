@@ -10,12 +10,8 @@
 	<div class="row page-content" id="search-results">
 		<div class="span9">
 			<article>
-				<h1>Search Results!</h1>
-				<?php 
-				$number_of_items = count($results['items']);
-				echo $number_of_items;
-				if(count($results['items'])):?>
-				searchingstuff
+				<h1>Search Results</h1>
+				<?php if(count($results['items'])):?>
 				<ul class="result-list">
 					<?php foreach($results['items'] as $result):?>
 					<li class="item">
