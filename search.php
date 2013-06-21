@@ -6,7 +6,8 @@
 	$start   = (is_numeric($_GET['start'])) ? (int)$_GET['start'] : 0;
 	$results = get_search_results($_GET['s'], $start, $limit, $domain);
 ?>
-<?php get_header(); ?>
+<?php get_header(); 
+	echo "blahblah";?>
 	<div class="row page-content" id="search-results">
 		<div class="span9">
 			<article>
@@ -58,7 +59,7 @@
 			<article>
 				<h1>Search Results</h1>
 				<?php if(have_posts()):
-					echo blahblah;?>
+					echo "blahblah";?>
 					<ul class="result-list">
 					<?php while(have_posts()): the_post();?>
 						<li class="item">
