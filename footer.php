@@ -1,4 +1,4 @@
-		<!--<div id = "footer-wrap">-->	
+		<div id = "footer-wrap">
 			<div id="footer" class="container">
 				<div class="row">
                     <div class="span12">
@@ -76,7 +76,7 @@
                     
 				</div>
             </div>
-		<!--</div>-->
+		</div>
 	</div><!-- container -->
 	</body>
 	<!--[if IE]>
