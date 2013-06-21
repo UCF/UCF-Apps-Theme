@@ -70,7 +70,7 @@ function sc_search_form() {
 		<?get_search_form()?>
 	</div>
 	<?
-	//return ob_get_clean();
+	return ob_get_clean();
 }
 add_shortcode('search_form', 'sc_search_form');
 
