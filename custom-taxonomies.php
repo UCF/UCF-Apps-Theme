@@ -30,7 +30,7 @@ abstract class CustomTaxonomy {
 		$show_in_name_menus    = NULL,
 		$show_ui               = NULL,
 		$show_tagcloud         = NULL,
-		//$hierarchical          = False,
+		$hierarchical          = False,
 		$update_count_callback = '',
 		$rewrite               = True,
 		$query_var             = NULL,
