@@ -132,7 +132,7 @@ class PgSections extends CustomTaxonomy
 		$add_new_item       = 'Add New Menu Section',
 		$new_item_name      = 'New Tag Menu Section',
 
-		$hierarchical = True;
+	//	$hierarchical = True;
 } // END class 
 
 ?>
