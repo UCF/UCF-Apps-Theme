@@ -64,10 +64,10 @@
 		                            	<li><a href="http://today.ucf.edu/">UCF Today</a></li>
 		                       </ul>
 				 </div>
-                       </div>
+                     <!--  </div> -->
                         <?php endif;?>
                     
-	<!--	</div> -->
+		</div> 
             </div>
 		</div>
 	</div><!-- container -->
