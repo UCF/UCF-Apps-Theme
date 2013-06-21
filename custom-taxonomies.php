@@ -107,7 +107,7 @@ class OrganizationalGroups extends CustomTaxonomy
 		$add_new_item       = 'Add New Organizational Group',
 		$new_item_name      = 'New Tag Organizational Group',
 		
-		$hierarchical = False;
+		$hierarchical = True;
 } // END class 
 
 
