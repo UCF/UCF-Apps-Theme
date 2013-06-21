@@ -6,17 +6,17 @@
 	$start   = (is_numeric($_GET['start'])) ? (int)$_GET['start'] : 0;
 	$results = get_search_results($_GET['s'], $start, $limit, $domain);
 ?>
-<?php get_header(); 
-	echo "blahblah";?>
+<?php get_header();?>
 	<div class="row page-content" id="search-results">
 		<div class="span9">
 			<article>
-				<h1>Search Results</h1>
+				<h1>Search Results!</h1>
 				<?php if(count($results['items'])):?>
 				<ul class="result-list">
 					<?php foreach($results['items'] as $result):?>
 					<li class="item">
 						<h3>
+						EFOJIW
 							<a class="<?=mimetype_to_application(($result['mime']) ? $result['mime'] : 'text/html')?>" href="<?=$result['url']?>">
 								<?php if($result['title']):?>
 								<?=$result['title']?>
