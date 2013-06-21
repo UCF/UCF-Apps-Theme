@@ -1,5 +1,5 @@
 <?php $options = get_option(THEME_OPTIONS_NAME);?>
-<?php if ($options['enable_google'] or $options['enable_google'] === null):?>
+<!--><?php if ($options['enable_google'] or $options['enable_google'] === null):?>-->
 <?php
 	$domain  = $options['search_domain'];
 	$limit   = (int)$options['search_per_page'];
