@@ -11,12 +11,15 @@
 		<div class="span9">
 			<article>
 				<h1>Search Results!</h1>
-				<?php if(count($results['items'])):?>
+				<?php 
+				echo $results;
+				if(count($results['items'])):?>
+				searchingstuff
 				<ul class="result-list">
 					<?php foreach($results['items'] as $result):?>
 					<li class="item">
 						<h3>
-						EFOJIW
+						
 							<a class="<?=mimetype_to_application(($result['mime']) ? $result['mime'] : 'text/html')?>" href="<?=$result['url']?>">
 								<?php if($result['title']):?>
 								<?=$result['title']?>
