@@ -21,7 +21,7 @@ abstract class CustomTaxonomy {
 		$parent_item        = 'Parent Category',
 		$parent_item_colon  = 'Parent Category:',
 		$edit_item          = 'Edit Tag',
-		$update_item        = 'Update Tag',
+		//$update_item        = 'Update Tag',
 		$add_new_item       = 'Add New Tag',
 		$new_item_name      = 'New Tag Name',
 		$menu_name          = NULL,
