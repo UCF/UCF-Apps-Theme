@@ -1,4 +1,4 @@
-		<div id = "footer-wrap">	
+		<!--<div id = "footer-wrap">-->	
 			<div id="footer" class="container">
 				<div class="row">
                     <div class="span12">
@@ -18,11 +18,10 @@
                     
                         <?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
                             <?php $options = get_option(THEME_OPTIONS_NAME);?>
-                            		
-                            	<div class = "span3">
-					<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
-				</div>				
-	                            <div id="footer-info">
+                            	<div id="footer-info">	
+								<div class = "span3">
+										<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
+								</div>				
 	                            <div class = "span6">
 	                                <?php if($options['organization_name']): ?>
 	                                    <span class="footer-emphasize"><?= $options['organization_name']; ?></span>
@@ -71,14 +70,14 @@
 		                            
 		                            		<li><a href="http://today.ucf.edu/">UCF Today</a></li
 		                            		</ul>
-		                     </div>
+									</div>
                             	</div>
                         <?php endif;?>
                     
-                </div>
-                	</div>
-			</div>
-		</div><!-- container -->
+				</div>
+            </div>
+		<!--</div>-->
+	</div><!-- container -->
 	</body>
 	<!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
