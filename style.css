@@ -234,7 +234,7 @@ because Resource list was moving out of flow when page was resized.*/
 .pub .modal .btn:hover { text-decoration: none; }
 
 .container.wide {width: 100%;}
-
+#i class="icon-circle-arrow-right"{list-style:none;}
 #home-description{background-color: #ddd; font-size: 25px; font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif; line-height: 40px; color: #737373; padding-top: 20px; padding-bottom: 20px;}
 
 #events-header{font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif; background-color: #fdde60; font-size: 20px;}
