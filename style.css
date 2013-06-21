@@ -175,7 +175,7 @@ select#UCFHBHeaderLinks {
 #footer .content-flow {float:left; margin-left: 5%;}
 /*Changed .content-flow2 from float:  left to position relative 
 because Resource list was moving out of flow when page was resized.*/
-#footer .content-flow2 {position: relative; left: 50px;  text-align: left; line-height: 14pt;}
+#footer .content-flow2 {position: relative; left: 5%;  text-align: left; line-height: 14pt;}
 #footer h4 {color: #FFC904; margin: 0;}
 #footer ul {margin: 0;}
 
