@@ -12,7 +12,7 @@
 			<article>
 				<h1>Search Results!</h1>
 				<?php 
-				$number_of_items = count($results['items');
+				$number_of_items = count($results['items']);
 				if(count($results['items'])):?>
 				searchingstuff
 				<ul class="result-list">
