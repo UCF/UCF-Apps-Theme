@@ -11,7 +11,9 @@
 		<div class="span9">
 			<article>
 				<h1>Search Results!</h1>
-				<?php if(count($results['items'])):?>
+				<?php 
+				$number_of_items = count($results['items');
+				if(count($results['items'])):?>
 				searchingstuff
 				<ul class="result-list">
 					<?php foreach($results['items'] as $result):?>
