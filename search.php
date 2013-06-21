@@ -57,7 +57,8 @@
 		<div class="span9">
 			<article>
 				<h1>Search Results</h1>
-				<?php if(have_posts()):?>
+				<?php if(have_posts()):
+					echo blahblah;?>
 					<ul class="result-list">
 					<?php while(have_posts()): the_post();?>
 						<li class="item">
