@@ -30,7 +30,7 @@ abstract class CustomTaxonomy {
 		$show_in_name_menus    = NULL,
 		$show_ui               = NULL,
 		$show_tagcloud         = NULL,
-		$hierarchical          = True,
+		$hierarchical          = False,
 		$update_count_callback = '',
 		$rewrite               = True,
 		$query_var             = NULL,
@@ -107,7 +107,7 @@ class OrganizationalGroups extends CustomTaxonomy
 		$add_new_item       = 'Add New Organizational Group',
 		$new_item_name      = 'New Tag Organizational Group',
 		
-		$hierarchical = True;
+		$hierarchical = False;
 } // END class 
 
 
