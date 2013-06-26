@@ -8,7 +8,7 @@
 		<?php the_post();?>
 			<div class="row page-content" id="<?=$post->post_name?>">
 				<div class="span12" id="page-top">
-				<!--	<article> -->
+					<article> 
 						<?=get_breadcrumbs($post->ID)?>
 						<? if(!is_front_page())	{ ?>
 							<h2><?php the_title();?></h2>
@@ -18,7 +18,7 @@
 							print get_post_meta($post->ID, 'page_subheader', TRUE);
 						}
 						?>  
-					<!-- </article> -->
+					 </article> 
 				</div>
 				<div id="sidebar" class="span3">
 					<?=get_sidebar();?>
