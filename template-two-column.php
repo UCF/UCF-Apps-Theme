@@ -18,13 +18,13 @@
 							print get_post_meta($post->ID, 'page_subheader', TRUE);
 						}
 						?>  
-					 </article> 
+				<!--	 </article> -->
 				</div>
 				<div id="sidebar" class="span3">
 					<?=get_sidebar();?>
 				</div>
 				<div class="span9">
-					<article>
+				<!--	<article> -->
 						<?php the_content();?>
 					</article>
 				</div>
