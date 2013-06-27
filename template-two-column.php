@@ -9,7 +9,7 @@
 			<div class="row page-content" id="<?=$post->post_name?>">
 				<div class="span12" id="page-top">
 					<article> 
-					<!--	<?=get_breadcrumbs($post->ID)?> -->
+						<?=get_breadcrumbs($post->ID)?> 
 						<? if(!is_front_page())	{ ?>
 							<h2><?php the_title();?></h2>
 						<? } ?>
@@ -25,7 +25,7 @@
 				</div>
 				<div class="span9">
 					<article>
-						<?php the_content();?>
+				<!--		<?php the_content();?> -->
 					</article>
 				</div>
 			</div>
