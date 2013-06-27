@@ -21,7 +21,7 @@
 					 </article> 
 				</div>
 				<div id="sidebar" class="span3">
-					<?=get_sidebar();?>
+					<?=//get_sidebar();?>
 				</div>
 				<div class="span9">
 					<article>
