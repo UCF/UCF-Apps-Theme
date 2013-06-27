@@ -25,7 +25,7 @@
 				</div>
 				<div class="span9">
 					<article>
-				<!--		<?php the_content();?> -->
+						<?php the_content();?>
 					</article>
 				</div>
 			</div>
