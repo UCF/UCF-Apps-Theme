@@ -17,4 +17,11 @@
             </div>
         </div>
     </div>
+    <div id="events-header" class="wide">
+        <div class="container">
+            <div class="row">
+                <div class="span12"></div>
+            </div>
+        </div>
+    </div>    
 <?php get_footer();?>
