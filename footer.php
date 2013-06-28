@@ -51,11 +51,11 @@
 	                                <?php endif; ?>
 	                                </span>
 	
-	                                <span class="footer-emphasize">
+	                               
 	                                <?php if($options['site_contact']): ?>
 	                                    &nbsp; | &nbsp;<a href="mailto:<?=$options['site_contact']?>"><?=$options['site_contact']?></a>
 	                                <?php endif; ?>
-	                                </span>
+	                               
 	                            </div>
 	                            
                         <?php endif;?>
