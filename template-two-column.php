@@ -35,4 +35,11 @@
 		get_template_part('includes/below-the-fold'); 
 	endif
 	?>
+ <div id="events-header" class="wide">
+        <div class="container">
+            <div class="row">
+                <div class="span12"></div>
+            </div>
+        </div>
+    </div>	
 <?php get_footer();?>
