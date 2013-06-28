@@ -57,22 +57,7 @@
 	                                <?php endif; ?>
 	                                </span>
 	                            	</div>
-	                            	<div class = "span3">
-	                            		<h4>Resource Links</h4>	
-
-	                            	
-	                            		<ul>
-	                            		
-	                            		<li><a href="http://www.ucf.edu">UCF Home Page</a></li>
-	                            		
-	                        
-	                            		<li><a href="http://today.ucf.edu/">UCF Today</a></li>
-	                            		
 	                            
-	                            		<li><a href="http://today.ucf.edu/">UCF Today</a></li>
-	                            		</ul>
-		                     </div>
-                            	
                         <?php endif;?>
                     
                 </div>
