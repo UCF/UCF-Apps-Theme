@@ -5,18 +5,16 @@ Github Theme URI: https://github.com/UCF/SMCA-Dept-Theme.git
 Version: v1.0.0
 */
 
+   
+
+
 body {
     font-size: 15px;
-    /*from 20 to 15 line hight*/
-    line-height: 15px;
-	background-color: #fff;
-	color: #000;
+    line-height: 20px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-/* UCF Header Styles!! */
-/*Chris was here */
-/*Mitchell was here*/
-/*Git is cool */
+/* UCF Header Styles */
 
 #UCFHBSearch_ucf fieldset #q {
 	line-height: 11px;
@@ -47,8 +45,6 @@ select#UCFHBHeaderLinks {
 
 
 /* Site Styles */
-
-.unique{color: yellow;}
 
 .breadcrumb {
 	background-color: #ffffff;
@@ -111,6 +107,9 @@ select#UCFHBHeaderLinks {
 #degree-summary .wrap p {
     font-size: 10px;
 }
+#page-top {
+	margin-bottom: 20px;
+}
 
 .end {clear: both; height: 1px;}
 
@@ -132,7 +131,6 @@ select#UCFHBHeaderLinks {
 
 /*#home .site-image img{display: block; margin: 0; border: 5px solid #fff;}*/
 #home .description{font-size: 16px; font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";}
-#home h2{color:gold;}
 #home .content p,
 #home .description p{font-size: inherit;}
 #home .description p {line-height:1em;}
@@ -153,27 +151,35 @@ select#UCFHBHeaderLinks {
 #header .social.menu.horizontal li:after{content: "";}
 
 #menu-background{background-color: #fdde60;}
-#header-menu a {color: #000; font-size: 15px; font-family: Helvetica, Arial, sans-serif;}
+#header-menu a {color: #000; font-size: 13px; font-family: Helvetica, Arial, sans-serif;}
 #header-menu {margin-top: 5px;}
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
 
-#footer-wrap{background-color: #707070; position: absolute; left: 0; right: 0;}
-#footer-wrap div {display: block;}
-#footer {color: #000; font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-align: center; margin: 0px auto 0px auto; padding: 10px 0px 25px 20px;}
-#footer-menu li {float: none;}
+#footer {line-height: 14px; color: #000; font-size: 11px; font-family: Helvetica, Arial, sans-serif; border-top: none; text-align: center; margin-left: auto; margin-right: auto; margin-top: 0px; margin-bottom: 0px; padding-bottom: 10px;}
+#footer-background {background-color: #707070;}
+#footer-menu {text-align: left;}
+#footer-menu .header {text-decoration: underline; font-weight: bold; color:#FCD057}
+#footer-menu li {text-align: left; list-style: square;}
 #footer a {color: #000; font-size: 11px; font-family: Helvetica, Arial, sans-serif;}
-#footer-menu li:after {content: "|";}
 #footer-widget-wrap { margin-top: 16px; }
 #footer .ucf{}
 #footer .info{position: relative; top: -10px;}
-#footer .info,
 #footer .info a{line-height: 1.5em; text-align: right; font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; font-weight: normal; font-size: 14px;}
 #footer .info .copyright{margin-top: 1em;}
-#footer .footer-emphasize {font-weight: bold; color: #FFC904;}
-#footer img {float:left; border:none;}
-#footer h4 {color: #FFC904; margin: 0; text-align:left}
-#footer ul {margin: 0; text-align:left; }
+#footer .footer-emphasize {font-weight: bold; color:#FCD057}
+
+#sidebar {}
+#sidebar-nav {
+	background-color: #F5F5F5;
+	border: 1px solid #E3E3E3;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+}
+
 
 #below-the-fold{margin-top: 2em; padding-top: 1em;border-top: 1px dotted #666;}
 #below-the-fold h2{font-size: 18px; margin: 0 0 1em 0; padding: 0;}
@@ -182,6 +188,24 @@ select#UCFHBHeaderLinks {
 .flickr-stream li{list-style-type: none; float: left; margin: 1px; padding: 0;}
 .flickr-stream li a{display: block; height: 74px; width: 74px;}
 
+#events,
+#events .date,
+#events .title,
+#events .title a{font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";}
+#events .event{
+    border-collapse:separate; position: relative;
+    background-color: #fff7d5; font-weight: bold;
+    padding: 20px; margin-top: 15px;
+}
+
+#events .date{position: relative;}
+#events .date .the_date{font-family: Helvetica, Arial, sans-serif;position: absolute; bottom: 0; padding: 0; margin-left: 10px; color: #666; font-size: 16px; line-height: 16px; font-weight: bold;}
+
+#events .title{font-family: 'TrocchiBold', Georgia, serif; font-size: 16px; font-weight: normal; color: #000; text-align: left; margin-top: 15px;}
+#events .title .wrap{display: block; max-height: 50px; overflow: hidden;}
+#events .location{margin-top: 10px; }
+#events .location {font-family: "Helvetica", "Arial", "sans-serif"; font-size: 12px; line-height: 14px; font-weight: normal; color: #888;}
+#events .location a {color: #888;}
 
 .news,
 .news .item,
@@ -230,7 +254,7 @@ select#UCFHBHeaderLinks {
 .pub .modal .btn:hover { text-decoration: none; }
 
 .container.wide {width: 100%;}
-#i class="icon-circle-arrow-right"{list-style:none;}
+
 #home-description{background-color: #ddd; font-size: 25px; font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif; line-height: 40px; color: #737373; padding-top: 20px; padding-bottom: 20px;}
 
 #events-header{font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif; background-color: #fdde60; font-size: 20px;}
@@ -246,13 +270,13 @@ select#UCFHBHeaderLinks {
 .home-link .home-link-desc{font-family: Georgia, Times, "Times New Roman", serif; font-weight: normal; font-size: 14px;}
 
 .resourcelink-list {margin-left: 0;}
-.resourcelink-list .resource-link{display: block; background-color: #fff; padding: 5px; margin-top: 5px;}
-.resourcelink-list a{ color: #0f00ff;}
+.resourcelink-list .resource-link{display: block; background-color: #fff6d2; padding: 5px; margin-top: 5px;}
+.resourcelink-list a{ color: #000;}
 
-#header h1 a {font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif;}
+#header h1 a {font-weight: 400; font-family: 'Georgia', Georgia, serif;}
 #header h1 a:hover {color: #fff;}
 #header {margin-bottom: 0; margin-top: 10px;}
-article h1, h2, h3 {font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif;}
+article h1, h2, h3 {font-weight: 400; font-family: 'Georgia', Georgia, serif;}
 p{font-weight: 400; font-family: Georgia, serif;}
 article h2{margin-top: 15px;}
 article h3, h4{margin-top: 20px;}
@@ -264,6 +288,7 @@ article h3, h4{margin-top: 20px;}
 .post-type-search-sorting { display: none; }
 
 .post-type-search>.search-toggle-text { position: absolute; top: 15px; right: 235px; z-index: 2 }
+
 #sidebar .post-type-search .search-toggle-text { display: none; }
 
 .post-type-search-header { position: relative; z-index: 1; }
@@ -436,10 +461,10 @@ article h3, h4{margin-top: 20px;}
     #menu-background {
         background-color: #ffc907;
     }
-	
-img.alignright {float:right; margin:50px 50px;}
-img.alignleft {float:left; margin:50px 50px;}
-img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-.alignright {float:right; }
-.alignleft {float:left; }
-.aligncenter {display: block; margin-left: auto; margin-right: auto}
+}
+
+/* Bootstrap overrides */
+.nav{font-size: 12px;}
+.nav-header{padding: 0px;}
+.nav-list li a:hover {background-color: #F5F5F5;}
+.nav-list > .active > a, .nav-list > .active > a:hover {background-color: #F5F5F5; color:#0088CC; text-shadow:none;}
