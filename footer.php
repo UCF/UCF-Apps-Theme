@@ -1,4 +1,4 @@
-	<div id = "footer-wrap">	
+	<div id = "footer-background">	
 			<div id="footer" class="container">
 				<div class="row">
                     <div class="span12">
