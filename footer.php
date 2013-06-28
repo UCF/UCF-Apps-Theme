@@ -56,7 +56,7 @@
 	                                    &nbsp; | &nbsp;<a href="mailto:<?=$options['site_contact']?>"><?=$options['site_contact']?></a>
 	                                <?php endif; ?>
 	                                </span>
-	                            	</div>
+	                            </div>
 	                            
                         <?php endif;?>
                     
