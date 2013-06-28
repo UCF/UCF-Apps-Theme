@@ -41,7 +41,6 @@
 	                                    <?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
 	                                    <br />
 	                                <?php endif;?>
-	                                <span class="footer-emphasize">
 	                                <?php if($options['phone_number'] and $options['fax_number']): ?>
 	                                    <br />Phone: <?=$options['phone_number'];?> | Fax: <?=$options['fax_number'];?>
 	                                <?php elseif($options['phone_number'] and !$options['fax_number']): ?>
@@ -49,9 +48,6 @@
 	                                <?php elseif(!$options['phone_number'] and $options['fax_number']): ?>
 	                                    <br />Fax: <?=$options['fax_number'];?>
 	                                <?php endif; ?>
-	                                </span>
-	
-	                               
 	                                <?php if($options['site_contact']): ?>
 	                                    &nbsp; | &nbsp;<a href="mailto:<?=$options['site_contact']?>"><?=$options['site_contact']?></a>
 	                                <?php endif; ?>
