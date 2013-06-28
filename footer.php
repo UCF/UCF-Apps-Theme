@@ -2,7 +2,7 @@
 			<div id="footer" class="container">
 				<div class="row">
                     <div class="span12">
-				<?=wp_nav_menu(array(
+			<!--	<?=wp_nav_menu(array(
 					'theme_location' => 'footer-menu', 
 					'container' => 'false', 
 					'menu_class' => 'menu horizontal', 
@@ -11,7 +11,7 @@
 					'depth' => 1,
 					'walker' => new Bootstrap_Walker_Nav_Menu()
 					));
-				?>
+				?> -->
                     </div>
                 </div>
                 <div class="row">
@@ -20,6 +20,7 @@
                             <?php $options = get_option(THEME_OPTIONS_NAME);?>
 							
 							<div class = "span3">
+								
 								<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
 							</div>	
 	                           
