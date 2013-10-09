@@ -36,10 +36,11 @@
 									   
 								</div>
 								<div class = "span6">
+									<h4>Useful Links</h4>
 									<?=wp_nav_menu(array(
 										'theme_location' => 'footer-menu', 
 										'container' => 'false', 
-										'menu_class' => 'menu horizontal', 
+										'menu_class' => '', 
 										'menu_id' => 'footer-menu', 
 										'fallback_cb' => false,
 										'depth' => 1,

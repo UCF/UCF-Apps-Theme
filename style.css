@@ -190,15 +190,34 @@ select#UCFHBHeaderLinks {
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
 
-#footer {line-height: 14px; color: #000; font-size: 11px; font-family: Helvetica, Arial, sans-serif; border-top: none; text-align: center; margin-left: auto; margin-right: auto; margin-top: 0px; margin-bottom: 0px; padding-bottom: 10px;}
+#footer {
+	line-height: 14px; 
+	color: #9F9F9F; 
+	font-size: 11px; 
+	font-family: Helvetica, Arial, sans-serif; 
+	border-top: none; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+	padding-bottom: 10px;
+	}
 #footer-background {
 	background-color: #707070;
 	margin: auto;
     position: relative;
 	}
 #footer-menu {text-align: left;}
-#footer-menu .header {text-decoration: underline; font-weight: bold; color:#FCD057}
-#footer-menu li {text-align: left; list-style: square;}
+#footer-menu .header {
+	text-decoration: underline; 
+	font-weight: bold; 
+	color:#FCD057
+	}
+#footer-menu li {
+	text-align: left; 
+	list-style: square;
+	color: #FFC907;
+	}
 #footer a {color: #000; font-size: 11px; font-family: Helvetica, Arial, sans-serif;}
 #footer-widget-wrap { margin-top: 16px; }
 #footer .ucf{}
@@ -207,11 +226,11 @@ select#UCFHBHeaderLinks {
 #footer .info .copyright{margin-top: 1em;}
 #footer .footer-emphasize {font-weight: bold; color:#FCD057}
 #footer h4 {
-	border-bottom: medium single #444444;
-	color: #FFFFFF;
+	border-bottom: medium dotted #9F9F9F;
+	color: #9F9F9F;
 	font-size: 13px;
 	margin: 0 0 15px;
-	padding-bottom: 15px
+	padding-bottom: 5px
 }
 
 #sidebar {}
