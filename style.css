@@ -182,9 +182,8 @@ select#UCFHBHeaderLinks {
     margin: auto;
     position: relative;
 }
-#header-menu a {color: #FFF; font-size: 13px; font-family: Helvetica, Arial, sans-serif;}
 #header-menu {
-	margin-top: 5px;
+	margin: 0;
 	background-color: #555555;
 	width: 1170px;
 	}
@@ -620,6 +619,7 @@ article h3, h4{margin-top: 20px;}
 }
 
 /* Bootstrap overrides */
+.container {width: 1120px;}
 .nav{font-size: 12px;}
 .nav-header{padding: 0px;}
 .nav-list li a:hover {background-color: #F5F5F5;}
