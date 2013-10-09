@@ -461,7 +461,7 @@ function bootstrap_menus() {
 			function start_lvl( &$output, $depth ) {
 
 				$indent = str_repeat( "\t", $depth );
-				$output	   .= "\n$indent<ul class=\"dropdown-menu\">\n";
+				$output	   .= "\n$indent<ul class=\"sf-menu\">\n";
 				
 			}
 

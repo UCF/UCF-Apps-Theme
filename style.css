@@ -183,7 +183,11 @@ select#UCFHBHeaderLinks {
     position: relative;
 }
 #header-menu a {color: #FFF; font-size: 13px; font-family: Helvetica, Arial, sans-serif;}
-#header-menu {margin-top: 5px;}
+#header-menu {
+	margin-top: 5px;
+	background-color: #555555;
+	width: 1170px;
+	}
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
 
