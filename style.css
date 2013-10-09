@@ -143,21 +143,59 @@ select#UCFHBHeaderLinks {
 #home .search label{display: block; color: #C14D00; font-size: 16px; font-weight: normal; font-family: "Georgia", "serif";}
 #home .bottom{margin-top: 16px; border-top: none;}
 
-#header-background{background-color: #ffc907;}
+#wrap {
+	margin: 0 auto;
+	width: 1170px;
+	}
+
+.clear {
+    clear: both;
+}
+.clearfix:before, .clearfix:after, .column-last:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.shadow-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}	
+
+#header-background {
+    background-color: #FFC907;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    margin: 0 auto 30px;
+    padding: 5px;
+    position: relative;
+    width: 1170px;
+}
+
 #header h1 a {color: #FFF;}
 #header{margin-bottom: .5em;margin-top:20px;border-bottom: none;}
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}
 #header .social.menu.horizontal li:after{content: "";}
 
-#menu-background{background-color: #fdde60;}
-#header-menu a {color: #000; font-size: 13px; font-family: Helvetica, Arial, sans-serif;}
+#menu-background{
+	background-color: #555555;
+    margin: auto;
+    padding: 5px;
+    position: relative;
+    width: 1170px;}
+#header-menu a {color: #FFF; font-size: 13px; font-family: Helvetica, Arial, sans-serif;}
 #header-menu {margin-top: 5px;}
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
 
 #footer {line-height: 14px; color: #000; font-size: 11px; font-family: Helvetica, Arial, sans-serif; border-top: none; text-align: center; margin-left: auto; margin-right: auto; margin-top: 0px; margin-bottom: 0px; padding-bottom: 10px;}
-#footer-background {background-color: #707070;}
+#footer-background {
+	background-color: #707070;
+	margin: auto;
+    padding: 5px;
+    position: relative;
+    width: 1170px;
+	}
 #footer-menu {text-align: left;}
 #footer-menu .header {text-decoration: underline; font-weight: bold; color:#FCD057}
 #footer-menu li {text-align: left; list-style: square;}
