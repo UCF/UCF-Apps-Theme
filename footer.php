@@ -5,7 +5,8 @@
 							<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
 								<?php $options = get_option(THEME_OPTIONS_NAME);?>
 								
-								<div class = "span6">
+								<div class = "span4">
+									<h4>Contact us</h4>
 									<?php if($options['organization_name']): ?>
 										<span class="footer-emphasize"><?= $options['organization_name']; ?></span>
 										<br />
@@ -34,7 +35,7 @@
 									<?php endif; ?>
 									   
 								</div>
-								<div class = "span3">
+								<div class = "span6">
 									<?=wp_nav_menu(array(
 										'theme_location' => 'footer-menu', 
 										'container' => 'false', 
