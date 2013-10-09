@@ -146,7 +146,6 @@ select#UCFHBHeaderLinks {
 #wrap {
 	margin: 0 auto;
 	width: 1170px;
-	padding: 5px;
 	}
 
 .clear {
@@ -169,7 +168,7 @@ select#UCFHBHeaderLinks {
     margin: 0 auto 30px;
     padding: 5px;
     position: relative;
-    width: 1170px;
+    width: 1160px;
 }
 
 #header h1 a {color: #FFF;}
@@ -181,9 +180,8 @@ select#UCFHBHeaderLinks {
 #menu-background{
 	background-color: #555555;
     margin: auto;
-    padding: 5px;
     position: relative;
-    width: 1170px;}
+}
 #header-menu a {color: #FFF; font-size: 13px; font-family: Helvetica, Arial, sans-serif;}
 #header-menu {margin-top: 5px;}
 #header-menu.menu.horizontal{padding-top: 0;}
@@ -193,9 +191,7 @@ select#UCFHBHeaderLinks {
 #footer-background {
 	background-color: #707070;
 	margin: auto;
-    padding: 5px;
     position: relative;
-    width: 1170px;
 	}
 #footer-menu {text-align: left;}
 #footer-menu .header {text-decoration: underline; font-weight: bold; color:#FCD057}
@@ -252,7 +248,7 @@ select#UCFHBHeaderLinks {
     position: relative;
 }
 .sf-menu a {
-    background-color: #2B2B2B;
+    background-color: #555555;
     display: block;
     position: relative;
     transition: background 0.4s ease 0s;
@@ -288,15 +284,15 @@ ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
     border-left: medium none;
 }
 .sf-menu a:hover {
-    background-color: #FC6440;
+    background-color: #FFC907;
     color: #FFFFFF;
 }
 #navigation .sf-menu > .current-menu-item > a, #navigation .sf-menu > .current-menu-parent > a {
-    background-color: #FC6440;
+    background-color: #FFC907;
     color: #FFFFFF;
 }
 .sf-menu ul {
-    background: none repeat scroll 0 0 #2B2B2B;
+    background: none repeat scroll 0 0 #555555;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     font-size: 12px;
     padding: 0;
@@ -418,12 +414,6 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 .container.wide {width: 100%;}
 
 #home-description{background-color: #ddd; font-size: 25px; font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif; line-height: 40px; color: #737373; padding-top: 20px; padding-bottom: 20px;}
-
-#events-header{font-weight: 400; font-family: 'TrocchiRegular', Georgia, serif; background-color: #fdde60; font-size: 20px;}
-#events-header .container{margin-top: 30px; padding-top: 10px; padding-bottom: 10px;}
-#more_events {margin-top: 10px;}
-#more_events a {float: right; color: #ff0000; text-decoration: underline;}
-
 #home .home-links{margin-top: 30px;}
 #home .home-links .side-bar{border-right: solid 1px #ffd333;}
 #home .home-links .home-link{text-align: center; padding-left: 55px; padding-right: 55px;}
