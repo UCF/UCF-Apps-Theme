@@ -59,14 +59,12 @@
         </div>
 		<div id="wrap" class="clearfix shadow-container">
 			<div id="menu-background" class="wide">
-				<div class="container">
-					<?=wp_nav_menu(array(
-						'theme_location' => 'header-menu',
-						'container' => 'false',
-						'menu_class' => 'sf-menu '.get_header_styles(),
-						'menu_id' => 'header-menu',
-						'walker' => new Bootstrap_Walker_Nav_Menu()
-						));
-					?>
-				</div>
+				<?=wp_nav_menu(array(
+					'theme_location' => 'header-menu',
+					'container' => 'false',
+					'menu_class' => 'sf-menu '.get_header_styles(),
+					'menu_id' => 'header-menu',
+					'walker' => new Bootstrap_Walker_Nav_Menu()
+					));
+				?>
 			</div>
