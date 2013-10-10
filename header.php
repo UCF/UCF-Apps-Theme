@@ -55,13 +55,7 @@
                         <?php $options = get_option(THEME_OPTIONS_NAME);?>
                     </div>
 					<div id="search" class="span4">
-						<form class="search-form" action="" method="get" role="search">
-							<div>
-								<label for="s">Search:</label>
-								<input id="s" class="search-field" type="text" placeholder="Search" name="s" value=""/>
-								<button class="search-submit" type="submit">Search</button>
-							</div>
-						</form>
+						<?php get_search_form();?>
 					</div>				
                 </div>
             </div>
