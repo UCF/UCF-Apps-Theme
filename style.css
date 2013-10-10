@@ -241,6 +241,7 @@ select#UCFHBHeaderLinks {
 #sidebar {margin-right: 10px;}
 #sidebar h2 {border-bottom: medium dotted;color: #555555}
 #sidebar ul {margin: auto;}
+#sidebar a {color: #FCD057};
 #sidebar-nav {
 	background-color: #F5F5F5;
 	border: 1px solid #E3E3E3;
