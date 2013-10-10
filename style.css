@@ -10,6 +10,7 @@ body {
     font-size: 15px;
     line-height: 20px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	background: url("../img/bg2.png") #FFFFFF;
 }
 
 /* UCF Header Styles */
@@ -241,7 +242,7 @@ select#UCFHBHeaderLinks {
 #sidebar {margin-right: 10px;}
 #sidebar h2 {border-bottom: medium dotted;color: #555555}
 #sidebar ul {margin: auto;}
-#sidebar a {color: #FCD057};
+#sidebar a {color: #EC651B};
 #sidebar-nav {
 	background-color: #F5F5F5;
 	border: 1px solid #E3E3E3;
