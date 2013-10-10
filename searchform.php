@@ -5,6 +5,7 @@
 			<span class="add-on">
 				<i class="icon-search"></i>
 			</span>
+		</div>
 		<input type="text" value="<?=htmlentities($_GET['s'])?>" name="s" class="search-field" id="s" placeholder="Search" />
 		<button type="submit" class="search-submit">Search</button>
 	</div>
