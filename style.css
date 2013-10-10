@@ -144,7 +144,7 @@ select#UCFHBHeaderLinks {
 #home .bottom{margin-top: 16px; border-top: none;}
 
 #wrap {
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	width: 1170px;
 	}
 
@@ -203,7 +203,7 @@ select#UCFHBHeaderLinks {
 	padding-bottom: 10px;
 	}
 #footer-background {
-	background-color: #707070;
+	background-color: #444444;
 	margin: auto;
     position: relative;
 	}
@@ -218,7 +218,7 @@ select#UCFHBHeaderLinks {
 	list-style: square;
 	color: #FFC907;
 	}
-#footer a {color: #000; font-size: 11px; font-family: Helvetica, Arial, sans-serif;}
+#footer a {color: #9F9F9F; font-size: 11px; font-family: Helvetica, Arial, sans-serif;}
 #footer-widget-wrap { margin-top: 16px; }
 #footer .ucf{}
 #footer .info{position: relative; top: -10px;}
