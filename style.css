@@ -10,7 +10,7 @@ body {
     font-size: 15px;
     line-height: 20px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	background: url("../img/bg2.png") #FFFFFF;
+	background: url("static/img/bg2.png") #FFFFFF;
 }
 
 /* UCF Header Styles */
@@ -58,54 +58,6 @@ select#UCFHBHeaderLinks {
 	color: #999999;
 }
 
-.spotlight .box, .spotlight .box p, .spotlight .box ul {
-    font-size: 12px;
-}
-.spotlight .box ul {
-    margin-left: 14px;
-}
-.spotlight .box h3 {
-    color: #D6AA15;
-    font-size: 15px;
-    line-height: 15px;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-#degree-summary {
-    background-color: #FDFAE1;
-    border-radius: 8px 8px 8px 8px;
-}
-#degree-summary .wrap {
-    font-family: "Trebuchet MS",sans-serif;
-    padding: 10px;
-}
-#degree-summary .wrap h3 {
-    color: #993300;
-    font-size: 17px;
-    line-height: 17px;
-    margin-top: 0;
-}
-#degree-summary .wrap table {
-    width: 100%;
-}
-#degree-summary .wrap table caption {
-    font-weight: bold;
-    text-align: left;
-}
-#degree-summary .wrap table th, #degree-summary .wrap table td {
-    border-top: 0 none;
-    font-size: 12.5px;
-    padding: 1px;
-}
-#degree-summary .wrap table tr:last-child {
-    border-top: 1px solid #000000;
-}
-#degree-summary .wrap table tr:last-child td:last-child {
-    font-weight: bold;
-}
-#degree-summary .wrap p {
-    font-size: 10px;
-}
 #page-top {
 	margin-bottom: 5px;
 }
@@ -189,6 +141,8 @@ select#UCFHBHeaderLinks {
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
 
+#search {margin-top: 30px;}
+
 #footer {
 	line-height: 14px; 
 	color: #9F9F9F; 
@@ -233,14 +187,14 @@ select#UCFHBHeaderLinks {
 #footer .info .copyright{margin-top: 1em;}
 #footer .footer-emphasize {font-weight: bold; color:#FCD057}
 #footer h4 {
-	border-bottom: medium dotted #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
 	color: #FFFFFF;
 	font-size: 13px;
 	margin: 0 0 15px;
 	padding-bottom: 5px
 }
 #sidebar {margin-right: 10px;}
-#sidebar h2 {border-bottom: medium dotted;color: #555555}
+#sidebar h2 {border-bottom: 1px solid;color: #555555; margin: 1em 0 0.5em; line-height: 24px;}
 #sidebar ul {margin: auto;}
 #sidebar a {color: #EC651B};
 #sidebar-nav {
@@ -653,9 +607,13 @@ article h3, h4{margin-top: 20px;}
     }
 }
 
-/* Bootstrap overrides */
+/* Bootstrap & Webcom-base overrides */
+.search-field, .search-form {width: 200px;}
+#search-results .result-list {line-height: 24px; margin: auto;}
+#search-results .title{color: #EC651B;}
 .container {width: 1120px;}
 .nav{font-size: 12px;}
 .nav-header{padding: 0px;}
 .nav-list li a:hover {background-color: #F5F5F5;}
 .nav-list > .active > a, .nav-list > .active > a:hover {background-color: #F5F5F5; color:#0088CC; text-shadow:none;}
+

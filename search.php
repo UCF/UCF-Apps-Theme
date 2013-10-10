@@ -58,8 +58,8 @@
 					<ul class="result-list">
 					<?php while(have_posts()): the_post();?>
 						<li class="item">
-							<h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-							<a href="<?php the_permalink();?>"><?php the_permalink();?></a>
+							<h3><a href="<?php the_permalink();?>" class="title"><?php the_title();?></a></h3>
+							<a href="<?php the_permalink();?>" class="url"><?php the_permalink();?></a>
 							<div class="snippet">
 								<?php the_excerpt();?>
 							</div>
