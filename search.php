@@ -10,7 +10,7 @@
 	<div class="page-content clearfix" id="search-results">
 		<div class="span12">
 			<article>
-				<h1>Search Results</h1>
+				<h1>Search Results for "<?=htmlentities($_GET['s'])?>"</h1>
 				<?php if(count($results['items'])):?>
 				<ul class="result-list">
 					<?php foreach($results['items'] as $result):?>
@@ -53,7 +53,7 @@
 	<div class="page-content clearfix" id="search-results">
 		<div class="span12">
 			<article>
-				<h1>Search Results</h1>
+				<h1>Search Results for "<?=htmlentities($_GET['s'])?>"</h1>
 				<?php if(have_posts()):?>
 					<ul class="result-list">
 					<?php while(have_posts()): the_post();?>
