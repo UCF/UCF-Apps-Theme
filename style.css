@@ -2,10 +2,8 @@
 Theme Name: SMCA Department Theme
 Author: SMCA Technology Services
 Github Theme URI: https://github.com/UCF/SMCA-Dept-Theme.git
-Version: v1.0.0
+Version: v2.0.0
 */
-
-   
 
 
 body {
@@ -216,24 +214,33 @@ select#UCFHBHeaderLinks {
 #footer-menu li {
 	text-align: left; 
 	list-style: square;
-	color: #FFC907;
+	color: #FFC907;	
+	font-size: 13px;
 	}
-#footer a {color: #9F9F9F; font-size: 11px; font-family: Helvetica, Arial, sans-serif;}
-#footer-widget-wrap { margin-top: 16px; }
+#footer a {
+	color: #9F9F9F; 
+	font-size: 13px; 
+	font-family: Helvetica, Arial, sans-serif;
+	}
+#footer-widget-wrap { 
+	margin-top: 16px; 
+	margin-bottom: 16px;
+	}
 #footer .ucf{}
 #footer .info{position: relative; top: -10px;}
 #footer .info a{line-height: 1.5em; text-align: right; font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; font-weight: normal; font-size: 14px;}
 #footer .info .copyright{margin-top: 1em;}
 #footer .footer-emphasize {font-weight: bold; color:#FCD057}
 #footer h4 {
-	border-bottom: medium dotted #9F9F9F;
-	color: #9F9F9F;
+	border-bottom: medium dotted #FFFFFF;
+	color: #FFFFFF;
 	font-size: 13px;
 	margin: 0 0 15px;
 	padding-bottom: 5px
 }
-
-#sidebar {}
+#sidebar {margin-right: 10px;}
+#sidebar h2 {border-bottom: medium dotted;color: #555555}
+#sidebar ul {margin: auto;}
 #sidebar-nav {
 	background-color: #F5F5F5;
 	border: 1px solid #E3E3E3;

@@ -10,14 +10,6 @@
 				<div class="span12" id="page-top">
 					<article> 
 						<?=get_breadcrumbs($post->ID)?> 
-						<? if(!is_front_page())	{ ?>
-							<h2><?php the_title();?></h2>
-						<? } ?>
-						
-						<?php if (get_post_meta($post->ID, 'page_subheader', TRUE)) {
-							print get_post_meta($post->ID, 'page_subheader', TRUE);
-						}
-						?>  
 					 </article> 
 				</div>
 				<div id="sidebar" class="span3">
@@ -25,6 +17,14 @@
 				</div>
 				<div class="span9">
 					<article>
+						<? if(!is_front_page())	{ ?>
+							<h2><?php the_title();?></h2>
+						<? } ?>
+						
+						<?php if (get_post_meta($post->ID, 'page_subheader', TRUE)) {
+							print get_post_meta($post->ID, 'page_subheader', TRUE);
+						}
+						?>  					
 						<?php the_content();?>
 					</article>
 				</div>
