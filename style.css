@@ -97,6 +97,7 @@ select#UCFHBHeaderLinks {
 #wrap {
 	margin: 0 auto 20px;
 	width: 1170px;
+	background-color: #FFFFFF;
 	}
 
 .clear {
@@ -608,9 +609,11 @@ article h3, h4{margin-top: 20px;}
 }
 
 /* Bootstrap & Webcom-base overrides */
-.search-field, .search-form {width: 200px;}
-#search-results .result-list {line-height: 24px; margin: auto;}
+.search-form .search-field {width: 200px;}
+#search-results .result-list {margin: auto;}
+#search-results .result-list .item h3 {margin: 0; line-height:24px;}
 #search-results .title{color: #EC651B;}
+#search-results h3{line-height: 24px;}
 .container {width: 1120px;}
 .nav{font-size: 12px;}
 .nav-header{padding: 0px;}
