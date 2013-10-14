@@ -541,28 +541,10 @@ class Page extends CustomPostType {
 	public function fields() {
 		$prefix = $this->options('name').'_';
 		return array(
-            array(
-                'name' => 'Homepage Link',
-                'desc' => 'If checked this will display a link on the homepage below the menu.',
-                'id'   => $prefix.'home_link',
-                'type' => 'checkbox',
-            ),
-            array(
-                'name' => 'Homepage Link Description',
-                'desc' => 'This description will be placed under the title of the homepage link.',
-                'id'   => $prefix.'home_description',
-                'type' => 'text',
-            ),
 			array(
-				'name' => 'Hide Lower Section',
-				'desc' => 'This section normally contains the Flickr, News and Events widgets. The footer will not be hidden',
-				'id'   => $prefix.'hide_fold',
-				'type' => 'checkbox',
-			),
-			array(
-				'name' => 'Post Search Taxonomy_Term',
-				'desc' => '(Optional) By default, pages with a two-column layout will pull post search results by the taxonomy term that matches the current page slug.  To pull posts from a different taxonomy term, type the term slug (e.g. "some-term-name") here.',
-				'id'   => $prefix.'taxonomy_term',
+				'name' => 'Sidebar Menu',
+				'desc' => '(Optional) By default, pages with a two-column layout will show the default menu.  To show a different menu, type the name here.',
+				'id'   => $prefix.'sidebar_menu',
 				'type' => 'text',
 			),			
             array(
