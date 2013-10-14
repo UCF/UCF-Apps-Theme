@@ -32,7 +32,7 @@
 													<br />Fax: <?=$options['fax_number'];?>
 												<?php endif; ?>
 												<?php if($options['site_contact']): ?>
-													<br /><i class="icon-envelope icon-white"></i><a href="mailto:<?=$options['site_contact']?>">E-mail</a>
+													<p><i class="icon-envelope icon-white"></i><a href="mailto:<?=$options['site_contact']?>">E-mail</a></p>
 												<?php endif; ?>								   
 											</div>
 											<div class = "span2">
