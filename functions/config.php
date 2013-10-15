@@ -113,7 +113,6 @@ define('CB_DOMAIN', $theme_options['cb_domain']);
  * object.
  **/
 Config::$custom_post_types = array(
-	'Centerpiece',
 //	'Video',
 	'ResourceLink',
 //	'Publication',
