@@ -426,7 +426,7 @@ Config::$scripts = array(
 	'http://universityheader.ucf.edu/bar/js/university-header.js',
 	//array('name' => 'jquery', 'src' => 'http://code.jquery.com/jquery-1.7.1.min.js',),
 	THEME_STATIC_URL.'/bootstrap/bootstrap/js/bootstrap.js',
-	//THEME_JS_URL.'/jquery-extras.js',
+	THEME_JS_URL.'/cycle.lite.js',
 	array('name' => 'base-script',  'src' => THEME_JS_URL.'/webcom-base.js',),
 	array('name' => 'theme-script', 'src' => THEME_JS_URL.'/script.js',),
 );
