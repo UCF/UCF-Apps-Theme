@@ -352,6 +352,53 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
     text-indent: -9999px;
 }
 
+#centerpiece_slider {overflow: hidden; position: relative; margin: auto; z-index: 1;}
+#centerpiece_slider ul { margin-left: 0; }
+li.centerpiece_single {float: left; list-style-type: none;}
+li.centerpiece_single img.centerpiece_single_img { }
+li.centerpiece_single object, #centerpiece_slider iframe, #centerpiece_slider li embed { }
+li.centerpiece_single .centerpiece_single_vid_thumb { cursor: pointer; }
+li.centerpiece_single .centerpiece_single_vid_hidden { display: none; }
+li.centerpiece_single .slide_contents { 
+        position: absolute;
+        display: block;
+        z-index: 999;
+        top: 40%; 
+        right: 0;
+        color: #fff; 
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; 
+        font-size: 16px; 
+        padding: 10px 10px 0 10px;
+        background: #000;
+        background: rgba(0,0,0,0.6);
+}
+
+.ie7 #centerpiece_slider,
+.ie8 #centerpiece_slider { width: 1170px; height: 338px; margin: auto; z-index: 1; }
+
+.ie7 li.centerpiece_single,
+.ie7 li.centerpiece_single img.centerpiece_single_img,
+.ie7 li.centerpiece_single .centerpiece_single_vid_hidden, 
+.ie7 li.centerpiece_single object, 
+.ie7 li.centerpiece_single iframe, 
+.ie7 li.centerpiece_single embed,
+.ie8 li.centerpiece_single,
+.ie8 li.centerpiece_single img.centerpiece_single_img,
+.ie8 li.centerpiece_single .centerpiece_single_vid_hidden, 
+.ie8 li.centerpiece_single object, 
+.ie8 li.centerpiece_single iframe, 
+.ie8 li.centerpiece_single embed { width: 1170px; height: 338px; zoom: 1; }
+
+.ie7 #centerpiece_slider ul,
+.ie8 #centerpiece_slider ul { height: 338px; }
+
+#centerpiece_control { display: none; }
+
+/* Standard rounded corners for centerpieces */
+.thumb_corner_tl { width: 10px; height: 10px; background: url('static/img/thumb_corner_topleft.png') no-repeat; position: absolute; top: 0; left: 0; zoom: 1; z-index: 999; }
+.thumb_corner_tr { width: 10px; height: 10px; background: url('static/img/thumb_corner_topright.png') no-repeat; position: absolute; top: 0; right: 0; zoom: 1; z-index: 999; }
+.thumb_corner_bl { width: 10px; height: 10px; background: url('static/img/thumb_corner_bottomleft.png') no-repeat; position: absolute; bottom: 0; left: 0; zoom: 1; z-index: 999; }
+.thumb_corner_br { width: 10px; height: 10px; background: url('static/img/thumb_corner_bottomright.png') no-repeat; position: absolute; bottom: 0; right: 0; zoom: 1; z-index: 999; }
 
 .flickr-stream{padding: 0; margin: 0;}
 .flickr-stream li{list-style-type: none; float: left; margin: 1px; padding: 0;}
