@@ -430,7 +430,7 @@ add_shortcode('post-type-search', 'sc_post_type_search');
     global $post;
 
     $args = array('p'              => esc_attr( $id ),
-            'post_type'      => 'centerpiece',
+            'post_type'      => 'slider',
             'posts_per_page' => '1'
           );
 
@@ -524,5 +524,5 @@ add_shortcode('post-type-search', 'sc_post_type_search');
     return $output;
 
   }
-  add_shortcode('centerpiece', 'sc_centerpiece_slider');
+  add_shortcode('slider', 'sc_centerpiece_slider');
 ?>
