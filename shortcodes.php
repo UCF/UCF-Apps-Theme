@@ -422,107 +422,82 @@ add_shortcode('post-type-search', 'sc_post_type_search');
  **/
 
   function sc_centerpiece_slider( $atts, $content = null ) {
-    
-    extract( shortcode_atts( array(
-      'id' => '',
-    ), $atts ) );
+		$id                 = @$atts['id'];
+		$recent         = get_posts(array(
+				'numberposts' => 1,
+				'post_type' => 'slider',
+				'post_status' => 'publish',
+		));
+		
+		$mostrecent = $recent[0];
+		
+		if (is_numeric($id)) {
+				$slider = get_post($id);
+		}
+		else {
+				$slider = $mostrecent;
+		}
+		
+		$slide_order                         = trim(get_post_meta($slider->ID, 'ss_slider_slideorder', TRUE));
+		$slide_order                        = explode(",",$slide_order);
+		$slide_title                        = get_post_meta($slider->ID, 'ss_slide_title', TRUE);
+		$slide_image                        = get_post_meta($slider->ID, 'ss_slide_image', TRUE);
+		$slide_links_to                        = get_post_meta($slider->ID, 'ss_slide_links_to', TRUE);
+		$slide_newtab                        = get_post_meta($slider->ID, 'ss_slide_link_newtab', TRUE);
+		$slide_duration                        = get_post_meta($slider->ID, 'ss_slide_duration', TRUE);
+		$rounded_corners                = get_post_meta($slider->ID, 'ss_slider_rounded_corners', TRUE);
+		
+		// #centerpiece_slider must contain an image placeholder set to the max
+		// slide width in order to trigger responsive styles properly--
+		// http://www.bluebit.co.uk/blog/Using_jQuery_Cycle_in_a_Responsive_Layout
+		$output .= '<div id="centerpiece_slider">
+								  <ul>
+										  <img src="'.get_bloginfo('stylesheet_directory').'/static/img/centerpiece_placeholder.gif" width="940" style="max-width: 100%; height: auto;">';
+				
+		foreach ($slide_order as $s) {
+				
+				if ($s !== '' && $slide_image[$s] !== NULL) {
+						$s = (int)$s;
+						$slide_image_url = wp_get_attachment_image_src($slide_image[$s], 'centerpiece-image');
+						$single_slide_duration  = ($slide_duration[$s] !== '' ? $slide_duration[$s] : 6);
+								
+						// Start <li>
+						$output .= '<li class="centerpiece_single" id="centerpiece_single_'.$s.'" data-duration="'.$single_slide_duration.'">';
+								
+						// Add <a> tag and target="_blank" if applicable:
+						if ($slide_links_to[$s] !== '') {
+								$output .= '<a href="'.$slide_links_to[$s];
+								if ($slide_newtab == 'on') {
+										$output .= ' target="_blank"';
+								}
+								$output .= '">';
+						}
+								
+						// Image output:
+						$output .= '<img class="centerpiece_single_img" src="'.$slide_image_url[0].'" title="'.$slide_title[$s].'" alt="'.$slide_title[$s].'"';
+						$output .= '/>';
+										
+						if ($slide_links_to[$s] !== '') {
+								$output .= '</a>';
+						}
+								
+						// End <li>
+						$output .= '</li>';
+				}
+		}
+										  
+		$output .= '</ul>';
+				
+		// Apply rounded corners:
+		if ($rounded_corners == 'on') {
+				$output .= '<div class="thumb_corner_tl"></div><div class="thumb_corner_tr"></div><div class="thumb_corner_bl"></div><div class="thumb_corner_br"></div>';
+		}
+				
+		$output .= '<div id="centerpiece_control"></div>
+						</div>';
 
-    global $post;
+		return $output;
 
-    $args = array('p'              => esc_attr( $id ),
-            'post_type'      => 'slider',
-            'posts_per_page' => '1'
-          );
-
-    query_posts( $args );
-
-    if( have_posts() ) while ( have_posts() ) : the_post();
-    
-      $slide_order       = get_post_meta($post->ID, 'ss_slider_slideorder', TRUE);
-      $slide_order      = explode(",",$slide_order);
-      $slide_title      = get_post_meta($post->ID, 'ss_slide_title', TRUE);
-      $slide_content_type   = get_post_meta($post->ID, 'ss_type_of_content', TRUE);
-      $slide_image      = get_post_meta($post->ID, 'ss_slide_image', TRUE);
-      $slide_links_to      = get_post_meta($post->ID, 'ss_slide_links_to', TRUE);
-      $slide_newtab      = get_post_meta($post->ID, 'ss_slide_link_newtab', TRUE);
-      $slide_duration      = get_post_meta($post->ID, 'ss_slide_duration', TRUE);
-      $rounded_corners    = get_post_meta($post->ID, 'ss_slider_rounded_corners', TRUE);
-      
-      // #centerpiece_slider must contain an image placeholder set to the max
-      // slide width in order to trigger responsive styles properly--
-      // http://www.bluebit.co.uk/blog/Using_jQuery_Cycle_in_a_Responsive_Layout
-      $output .= '<div id="centerpiece_slider">
-              <ul>
-                <img src="'.get_bloginfo('stylesheet_directory').'/static/img/centerpiece_placeholder.gif" width="1170" style="max-width: 100%; height: auto;">';
-      
-      foreach ($slide_order as $s) {
-        if ($s !== '') {
-          
-          $slide_image_url = wp_get_attachment_image_src($slide_image[$s], 'centerpiece-image');
-          $slide_video_thumb_url = wp_get_attachment_image_src($slide_video_thumb[$s], 'centerpiece-image');
-          $slide_duration  = ($slide_duration[$s] !== '' ? $slide_duration[$s] : 6);
-          
-          // Start <li>
-          $output .= '<li class="centerpiece_single" id="centerpiece_single_'.$s.'" data-duration="'.$slide_duration.'">';
-          
-          // Add <a> tag and target="_blank" if applicable:
-          if ($slide_links_to[$s] !== '' && $slide_content_type[$s] == 'image') {
-            $output .= '<a href="'.$slide_links_to[$s];
-            if ($slide_newtab == 'on') {
-              $output .= ' target="_blank"';
-            }
-            $output .= '">';
-          }
-          
-          // Image output:
-          if ($slide_content_type[$s] == 'image') {
-            $output .= '<img class="centerpiece_single_img" src="'.$slide_image_url[0].'" title="'.$slide_title[$s].'" alt="'.$slide_title[$s].'"';
-            $output .= '/>';
-            
-            if ($slide_links_to[$s] !== '' && $slide_content_type[$s] == 'image') {
-              $output .= '</a>';
-            }
-            
-            if ($slide_content[$s] !== '') {
-              $output .= '<div class="slide_contents">'.apply_filters('the_content', $slide_content[$s]).'</div>';
-            }
-          }
-                    
-          
-          // Video output:
-          if ($slide_content_type[$s] == 'video') {
-            if ($slide_video_thumb[$s]) {
-              $output .= '<img class="centerpiece_single_vid_thumb" src="'.$slide_video_thumb_url[0].'" alt="Click to Watch" title="Click to Watch" />';
-              $output .= '<div class="centerpiece_single_vid_hidden">'.$slide_video[$s].'</div>';
-            }
-            else {
-              $output .= $slide_video[$s];
-            }
-          }
-          
-          // End <li>
-          $output .= '</li>';
-        }
-      }
-              
-              
-      $output .= '</ul>';
-      
-      // Apply rounded corners:
-      if ($rounded_corners == 'on') {
-        $output .= '<div class="thumb_corner_tl"></div><div class="thumb_corner_tr"></div><div class="thumb_corner_bl"></div><div class="thumb_corner_br"></div>';
-      }
-      
-      $output .= '
-            <div id="centerpiece_control"></div>
-          </div>';
-
-    endwhile;
-
-    wp_reset_query();
-
-    return $output;
-
-  }
+    }
   add_shortcode('slider', 'sc_centerpiece_slider');
 ?>
