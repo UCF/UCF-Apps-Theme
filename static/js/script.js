@@ -362,6 +362,8 @@ if (typeof jQuery != 'undefined'){
 		Generic.removeExtraGformStyles($);
 		Generic.mobileNavBar($);
 		Generic.PostTypeSearch($);
+		centerpieceSlider($);
+		centerpieceSingleSlide($);
 	});
 }else{console.log('jQuery dependancy failed to load');}
 
