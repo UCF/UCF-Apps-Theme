@@ -784,7 +784,7 @@ class Slider extends CustomPostType {
 									),
 								array(
 										'name'	=> __('Slide Order'),
-										'id'	=> $prefix . 'slider_sliderorder',
+										'id'	=> $prefix . 'slider_slideorder',
 										'type'	=> 'text',
 										'desc'	=> ''
 									)
