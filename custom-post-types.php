@@ -734,7 +734,7 @@ class Post extends CustomPostType {
 
 class Slider extends CustomPostType {
 	public
-		$name			= 'Slider',
+		$name			= 'slider',
 		$plural_name	= 'Sliders',
 		$singular_name	= 'Slider',
 		$add_new_item	= 'Add New Slider',
