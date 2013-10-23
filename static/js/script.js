@@ -280,6 +280,74 @@ Generic.PostTypeSearch = function($) {
 		});
 }
 
+centerpieceSlider = function($) {
+        // Slider Init
+        var slider = $('#centerpiece_slider');
+        if(slider.length) {
+                
+                // Get all duration values:
+                var timeouts = new Array();
+                $('#centerpiece_slider ul li').each(function() {
+                        duration = $(this).attr('data-duration');
+                        // Just in case it's not assigned through php somehow:
+                        if (duration == '') {
+                                duration = 6;
+                        }
+                        timeouts.push(duration);
+                });
+                
+                // Initiate slider:                
+                $(function() { 
+                        $('#centerpiece_slider ul').cycle({ 
+                                delay:  -2000, 
+                                fx:     'fade', 
+                                speed:  2000, 
+                                pager:  '#centerpiece_control',
+                                slideExpr: '.centerpiece_single',
+                                slideResize: 0,
+                                timeoutFn: calculateTimeout 
+                        }); 
+                });
+                         
+                // timeouts per slide (in seconds) 
+                function calculateTimeout(currElement, nextElement, opts, isForward) { 
+                        var index = opts.currSlide; 
+                        return timeouts[index] * 1000; 
+                }
+                
+                // Stop slider when a video thumbnail is clicked:
+                $('.centerpiece_single_vid_thumb').click(function() { 
+                        $('#centerpiece_slider ul').cycle('pause');
+                        $(this).hide().next().fadeIn(500);
+                        // Also hide the centerpiece controls for mobile devices:
+                        if ($(window).width() <= 768) {
+                                $('#centerpiece_control').hide();
+                        }
+                });
+                
+                // If a centerpiece control button is clicked, kill any videos and fix slide dimensions:
+                $('#centerpiece_control').click(function() {
+                        $('#centerpiece_slider li iframe, #centerpiece_slider li object, #centerpiece_slider li embed').each(function() {
+                                var oldsrc = $(this).attr('src');
+                                $(this).attr('src', 'empty');
+                                $(this).attr('src', oldsrc);
+                                if ($(this).parent().prev('.centerpiece_single_vid_thumb')) {
+                                        $(this).parent().hide().prev('.centerpiece_single_vid_thumb').show();
+                                }
+                        });
+                });
+                
+        }
+}
+
+centerpieceSingleSlide = function($) {
+        // Hide the centerpiece placeholder for single-slide centerpieces
+        // so that the slide displays properly
+        if ( $('#centerpiece_slider > ul li').length < 2 ) {
+                $('#centerpiece_slider > ul > img').hide();
+        }
+}
+
 if (typeof jQuery != 'undefined'){
 	jQuery(document).ready(function($) {
 		Webcom.slideshow($);
