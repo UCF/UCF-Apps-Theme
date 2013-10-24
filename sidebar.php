@@ -25,6 +25,7 @@
 			'menu_class' => 'widget widget_nav_menu'.get_header_styles(),
 			'menu_id' => 'sidebar-menu'
 			));
+		}
 			?>
 		
 <?php endif;?>
