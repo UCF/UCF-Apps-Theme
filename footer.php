@@ -38,17 +38,21 @@
 											<div class = "span1">
 											</div>
 											<div class = "span3">
-												<h4>Useful Links</h4>
-												<?=wp_nav_menu(array(
-													'theme_location' => 'footer-menu', 
-													'container' => 'false', 
-													'menu_class' => '', 
-													'menu_id' => 'footer-menu', 
-													'fallback_cb' => false,
-													'depth' => 1,
-													'walker' => new Bootstrap_Walker_Nav_Menu()
-													));
-												?>
+											
+											<?php 
+												$footer_menu = wp_get_name_menu_object('footer-menu');
+												if ($footer-menu) { ?>
+													<h4><? echo $footer_menu->name ?></h4>
+													<?=wp_nav_menu(array(
+														'theme_location' => 'footer-menu', 
+														'container' => 'false', 
+														'menu_class' => '', 
+														'menu_id' => 'footer-menu', 
+														'fallback_cb' => false,
+														'depth' => 1,
+														'walker' => new Bootstrap_Walker_Nav_Menu()
+														));
+												}   ?>
 											</div>
 											<div class = "span1">
 											</div>
