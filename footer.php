@@ -35,7 +35,7 @@
 													<p><i class="icon-envelope icon-white"></i><a href="mailto:<?=$options['site_contact']?>">E-mail</a></p>
 												<?php endif; ?>								   
 											</div>
-											<div class = "span2">
+											<div class = "span1">
 											</div>
 											<div class = "span3">
 												<h4>Useful Links</h4>
@@ -50,7 +50,7 @@
 													));
 												?>
 											</div>
-											<div class = "span2">
+											<div class = "span1">
 											</div>
 											<div class = "span3">								
 												<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>

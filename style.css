@@ -120,7 +120,7 @@ select#UCFHBHeaderLinks {
     margin: 0 auto 30px;
     padding: 5px;
     position: relative;
-    width: 1000px;
+    width: 990px;
 }
 
 #header h1 a {color: #FFF;}
@@ -137,7 +137,7 @@ select#UCFHBHeaderLinks {
 #header-menu {
 	margin: 0;
 	background-color: #555555;
-	width: 990px;
+	width: 1000px;
 	}
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
@@ -668,4 +668,5 @@ article h3, h4{margin-top: 20px;}
 .nav-list li a:hover {background-color: #F5F5F5;}
 .nav-list > .active > a, .nav-list > .active > a:hover {background-color: #F5F5F5; color:#0088CC; text-shadow:none;}
 .page-content {margin-bottom: 20px;}
+.row {margin-left: auto;}
 
