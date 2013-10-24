@@ -41,7 +41,7 @@
 											
 											<?php 
 												$footer_menu = wp_get_name_menu_object('footer-menu');
-												if ($footer-menu) { ?>
+												if ($footer_menu) { ?>
 													<h4><? echo $footer_menu->name ?></h4>
 													<?=wp_nav_menu(array(
 														'theme_location' => 'footer-menu', 
