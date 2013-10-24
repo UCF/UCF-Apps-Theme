@@ -96,7 +96,7 @@ select#UCFHBHeaderLinks {
 
 #wrap {
 	margin: 0 auto 20px;
-	width: 1170px;
+	width: 1000px;
 	background-color: #FFFFFF;
 	}
 
@@ -120,7 +120,7 @@ select#UCFHBHeaderLinks {
     margin: 0 auto 30px;
     padding: 5px;
     position: relative;
-    width: 1160px;
+    width: 1000px;
 }
 
 #header h1 a {color: #FFF;}
@@ -137,7 +137,7 @@ select#UCFHBHeaderLinks {
 #header-menu {
 	margin: 0;
 	background-color: #555555;
-	width: 1170px;
+	width: 1000px;
 	}
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
@@ -374,7 +374,7 @@ li.centerpiece_single .slide_contents {
 }
 
 .ie7 #centerpiece_slider,
-.ie8 #centerpiece_slider { width: 1170px; height: 338px; margin: auto; z-index: 1; }
+.ie8 #centerpiece_slider { width: 1000px; height: 338px; margin: auto; z-index: 1; }
 
 .ie7 li.centerpiece_single,
 .ie7 li.centerpiece_single img.centerpiece_single_img,
@@ -387,7 +387,7 @@ li.centerpiece_single .slide_contents {
 .ie8 li.centerpiece_single .centerpiece_single_vid_hidden, 
 .ie8 li.centerpiece_single object, 
 .ie8 li.centerpiece_single iframe, 
-.ie8 li.centerpiece_single embed { width: 1170px; height: 338px; zoom: 1; }
+.ie8 li.centerpiece_single embed { width: 1000px; height: 338px; zoom: 1; }
 
 .ie7 #centerpiece_slider ul,
 .ie8 #centerpiece_slider ul { height: 338px; }
