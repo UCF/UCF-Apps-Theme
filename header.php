@@ -50,11 +50,11 @@
         <div id="header-background" class="wide">
             <div class="container">
                 <div class="row">
-                    <div id="header" class="span10">
+                    <div id="header" class="span9">
                         <h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
                         <?php $options = get_option(THEME_OPTIONS_NAME);?>
                     </div>
-					<div id="search" class="span4">
+					<div id="search" class="span3">
 						<?php get_search_form();?>
 					</div>	
                 </div>

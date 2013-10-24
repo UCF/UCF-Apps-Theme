@@ -657,7 +657,7 @@ article h3, h4{margin-top: 20px;}
 }
 
 /* Bootstrap & Webcom-base overrides */
-.search-form .search-field {width: 200px;}
+.search-form .search-field {width: 120px;}
 #search-results .result-list {margin: auto;}
 #search-results .result-list .item h3 {margin: 0; line-height:24px;}
 #search-results .title{color: #EC651B;}
