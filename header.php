@@ -53,10 +53,7 @@
                     <div id="header" class="span10">
                         <h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
                         <?php $options = get_option(THEME_OPTIONS_NAME);?>
-                    </div>
-					<div id="search" class="span4">
-						<?php get_search_form();?>
-					</div>				
+                    </div>		
                 </div>
             </div>
         </div>
@@ -70,4 +67,7 @@
 					'walker' => new Bootstrap_Walker_Nav_Menu()
 					));
 				?>
+				<div id="search" class="span4">
+					<?php get_search_form();?>
+				</div>					
 			</div>
