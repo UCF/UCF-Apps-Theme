@@ -53,25 +53,21 @@
                     <div id="header" class="span10">
                         <h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
                         <?php $options = get_option(THEME_OPTIONS_NAME);?>
-                    </div>		
+                    </div>
+					<div id="search" class="span4">
+						<?php get_search_form();?>
+					</div>	
                 </div>
             </div>
         </div>
 		<div id="wrap" class="clearfix shadow-container">
-			<div class="row">
-				<div class="span12">
-					<div id="menu-background" class="wide">
-						<?=wp_nav_menu(array(
-							'theme_location' => 'header-menu',
-							'container' => 'false',
-							'menu_class' => 'sf-menu '.get_header_styles(),
-							'menu_id' => 'header-menu',
-							'walker' => new Bootstrap_Walker_Nav_Menu()
-							));
-						?>			
-					</div>
-				</div>
-				<div id="search" class="span4">
-					<?php get_search_form();?>
-				</div>	
+			<div id="menu-background" class="wide">
+				<?=wp_nav_menu(array(
+					'theme_location' => 'header-menu',
+					'container' => 'false',
+					'menu_class' => 'sf-menu '.get_header_styles(),
+					'menu_id' => 'header-menu',
+					'walker' => new Bootstrap_Walker_Nav_Menu()
+					));
+				?>			
 			</div>
