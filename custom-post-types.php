@@ -541,11 +541,11 @@ class Page extends CustomPostType {
 	public function fields() {
 		$prefix = $this->options('name').'_';
 		$menus = wp_get_nav_menus(array('orderby' => 'name'));
-		//$menu_array = array('--Choose Menu--');
+		$menu_array = array('--Choose Menu--');
 
 		foreach ( $menus as $menu ) {
 			echo $menu->name;
-			$menu_array[] =  wp_html_excerpt( $menu->name, 40, '&hellip;');
+			$menu_array[] =  $menu->name;
 		}
 		return array(
 			array(
@@ -553,7 +553,7 @@ class Page extends CustomPostType {
 				'desc' => '(Optional) By default, pages with a two-column layout will show the default menu.  To show a different menu, type the name here.',
 				'id'   => $prefix.'sidebar_menu',
 				'type' => 'select',
-				'options' => $menu_array
+				'options' => $menu_array,
 			),			
             array(
                 'name' => 'Stylesheet',
