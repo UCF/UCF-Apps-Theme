@@ -5,7 +5,7 @@
         li.centerpiece_single img.centerpiece_single_vid_thumb,
         li.centerpiece_single object, 
         li.centerpiece_single iframe, 
-        li.centerpiece_single embed {width: 940px; height: 338px; }
+        li.centerpiece_single embed {width: 1000px; height: 338px; }
         #centerpiece_slider ul {height: 338px;}
 }
 
