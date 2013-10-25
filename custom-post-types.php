@@ -540,12 +540,19 @@ class Page extends CustomPostType {
 
 	public function fields() {
 		$prefix = $this->options('name').'_';
+		$menus = get_terms( 'nav_menu', array( 'hide_empty' => false ) );
+		$menu_array = array('--Choose Menu--');
+
+		foreach ( $menus as $menu ) {
+			$menu_array[] = $menu->name;
+		}
 		return array(
 			array(
 				'name' => 'Sidebar Menu',
 				'desc' => '(Optional) By default, pages with a two-column layout will show the default menu.  To show a different menu, type the name here.',
 				'id'   => $prefix.'sidebar_menu',
-				'type' => 'text',
+				'type' => 'select',
+				'options' => $menu_array
 			),			
             array(
                 'name' => 'Stylesheet',
@@ -977,7 +984,7 @@ class Slider extends CustomPostType {
 									<tr>
 										<th><label for="ss_slide_image[<?=$s?>]">Slide Image</label></th>
 										<td>
-											<span class="description">Recommended image size is 1170x338px. Larger images may be cropped.</span><br/>
+											<span class="description">Recommended image size is 1000x338px. Larger images may be cropped.</span><br/>
 											<?php
 												if ($slide_image[$s]){
 													$image = get_post($slide_image[$s]);
@@ -1047,7 +1054,7 @@ class Slider extends CustomPostType {
 								<tr>
 									<th><label for="ss_slide_image[<?=$i?>]">Slide Image</label></th>
 									<td>
-										<span class="description">Recommended image size is 1170x338px. Larger images may be cropped.</span><br/>
+										<span class="description">Recommended image size is 1000x338px. Larger images may be cropped.</span><br/>
 										<input type="file" id="file_<?=$post->ID?>" name="ss_slide_image[<?=$i?>]"><br />
 									</td>
 								</tr>

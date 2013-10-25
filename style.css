@@ -228,7 +228,7 @@ select#UCFHBHeaderLinks {
 .sf-menu ul {
     position: absolute;
     top: -999em;
-    width: 180px;
+    width: 200px;
 }
 .sf-menu ul li {
     width: 100%;
@@ -351,7 +351,7 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
     text-indent: -9999px;
 }
 
-#centerpiece_slider {overflow: hidden; position: relative; margin: auto; z-index: 1;}
+#centerpiece_slider {overflow: hidden; position: relative; margin: auto; z-index: 1; margin-left:-20px; width:1000px;}
 #centerpiece_slider ul { margin-left: 0; }
 li.centerpiece_single {float: left; list-style-type: none;}
 li.centerpiece_single img.centerpiece_single_img { }

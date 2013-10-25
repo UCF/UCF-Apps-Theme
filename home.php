@@ -10,7 +10,6 @@
             <div class="row">
                 <div class="span12">
                     <?=$description; ?>
-					<?php echo do_shortcode('[slider]');?>
                 </div>
             </div>
         </div>
