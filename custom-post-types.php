@@ -540,10 +540,8 @@ class Page extends CustomPostType {
 
 	public function fields() {
 		$prefix = $this->options('name').'_';
-		$defaults = array( 'hide_empty' => false, 'orderby' => 'none' );
-		$args = wp_parse_args( $args, $defaults );
-		$menus = (apply_filters( 'wp_get_nav_menus', get_terms( 'nav_menu',  $args), $args ));
-		$menu_array = array('--Choose Menu--');
+		$menus = (wp_get_nav_menus(array('orderby' => 'name'));
+		//$menu_array = array('--Choose Menu--');
 
 		foreach ( $menus as $menu ) {
 			$menu_array[] = $menu->name;
