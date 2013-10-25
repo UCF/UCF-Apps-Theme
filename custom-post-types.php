@@ -540,12 +540,11 @@ class Page extends CustomPostType {
 
 	public function fields() {
 		$prefix = $this->options('name').'_';
-		$menus = get_terms( 'nav_menu', array( 'hide_empty' => false ) );
-		$menu_array = array('--Choose Menu--');
 
-		foreach ( $menus as $menu ) {
-			$menu_array[] = $menu->name;
-		}
+		$defaults = array( 'hide_empty' => false, 'orderby' => 'none' );
+		$args = wp_parse_args( $args, $defaults );
+		$menu_array (apply_filters( 'wp_get_nav_menus', get_terms( 'nav_menu',  $args), $args ));
+		
 		return array(
 			array(
 				'name' => 'Sidebar Menu',

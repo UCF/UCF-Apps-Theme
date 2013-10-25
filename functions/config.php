@@ -22,7 +22,8 @@ function __init__(){
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 	));
-	register_sidebar(array(
+	/** Not currently in use in this theme **/
+	/*	register_sidebar(array(
 		'name'          => __('Below the Fold - Left'),
 		'id'            => 'bottom-left',
 		'description'   => 'Left column on the bottom of pages, after flickr images if enabled.',
@@ -69,8 +70,8 @@ function __init__(){
 		'id' => 'bottom-four',
 		'description' => 'Far right in footer on the bottom of pages.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-	));
+		'after_widget' => '</div>', 
+	)); */
 	foreach(Config::$styles as $style){Config::add_css($style);}
 	foreach(Config::$scripts as $script){Config::add_script($script);}
 	
