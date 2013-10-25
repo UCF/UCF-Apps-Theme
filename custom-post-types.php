@@ -544,8 +544,8 @@ class Page extends CustomPostType {
 		$menu_array = array('--Choose Menu--');
 
 		foreach ( $menus as $menu ) {
-			echo $menu->name;
 			$menu_array[] =  $menu->name;
+			echo $menu_array;
 		}
 		return array(
 			array(
