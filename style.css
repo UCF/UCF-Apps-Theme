@@ -137,7 +137,7 @@ select#UCFHBHeaderLinks {
 #header-menu {
 	margin: 0;
 	background-color: #555555;
-	width: 1000px;
+	width: 100%;
 	}
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}

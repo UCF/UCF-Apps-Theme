@@ -1,3 +1,4 @@
+				</div>
 				<div id = "footer-background">	
 						<div id="footer" class="container">
 							<div id="footer-widget-wrap" class="clearfix">

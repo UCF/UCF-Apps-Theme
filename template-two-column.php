@@ -4,7 +4,6 @@
  **/
 ?>
 <?php get_header(); ?>
-	<div class="container">
 		<?php the_post();?>
 			<div class="row page-content" id="<?=$post->post_name?>">
 				<div class="span12" id="page-top">
@@ -29,6 +28,5 @@
 					</article>
 				</div>
 			</div>
-	</div>
 
 <?php get_footer();?>

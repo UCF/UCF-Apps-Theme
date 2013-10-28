@@ -4,7 +4,6 @@
  **/
 ?>
 <?php get_header(); ?>
-    <div class="container">
     <?php the_post();?>
         <div class="page-content clearfix" id="<?=$post->post_name?>">
             <div class="span12">
@@ -16,5 +15,4 @@
                 </article>
             </div>
         </div>
-    </div>   
 <?php get_footer();?>
