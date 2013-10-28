@@ -651,7 +651,7 @@ article h3, h4{margin-top: 20px;}
 
 @media (max-width: 480px) {
     #menu-background {
-        background-color: #ffc907;
+        background-color: #555555;
     }
 }
 
@@ -661,7 +661,7 @@ article h3, h4{margin-top: 20px;}
 #search-results .result-list .item h3 {margin: 0; line-height:24px;}
 #search-results .title{color: #EC651B;}
 #search-results h3{line-height: 24px;}
-.container {width: 1000px;}
+.container {width: 100%;}
 .nav{font-size: 12px;}
 .nav-header{padding: 0px;}
 .nav-list li a:hover {background-color: #F5F5F5;}

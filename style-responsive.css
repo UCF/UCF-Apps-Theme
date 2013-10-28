@@ -7,6 +7,8 @@
         li.centerpiece_single iframe, 
         li.centerpiece_single embed {width: 1000px; height: 338px; }
         #centerpiece_slider ul {height: 338px;}
+		
+		body {padding: 0px;}
 }
 
 @media (max-width: 979px) {
@@ -25,11 +27,17 @@
         #centerpiece_slider ul {height: 260px;}
         
         .ribbon { font-size: 0.78em; }
+		
+		body {padding: 0px;}
+		
+		#wrap { width: 724px };
 }
 
 @media (max-width: 767px) {
         #header { margin-left: 0; }
         #header h1 { width: 100%; clear: both; }
+		
+		#footer {margin-left: 10px;}
         
         #home .description { margin-top: 10px; }
         
@@ -105,6 +113,8 @@
         }
         
         .alignright, .alignleft { max-width: 40%; }
+		
+		body {padding: 0px;}
 
 }
 
@@ -114,21 +124,24 @@
         #header h1 a { font-size: 22px; }
         
         #header-menu { width: 100%; }
-        .navbar ul#header-menu li:last-child { margin-bottom: 20px; }
+		
+		#footer { margin-left: 10px; }
+		
+        .sf-menu  ul#header-menu li:last-child { margin-bottom: 20px; }
         
-        .navbar .menu {
+        .sf-menu  .menu {
                 padding: 0;
         }
-        .navbar ul#header-menu li:after {
+        .sf-menu  ul#header-menu li:after {
                 content: "";
         }
-        .navbar ul#header-menu li, .navbar ul#header-menu ul.dropdown-menu li {
+        .sf-menu  ul#header-menu li, .sf-menu  ul#header-menu ul.dropdown-menu li {
                 display: block;
                 float: none;
                 margin: 0;
                 line-height: 13px;
         }
-        .navbar ul#header-menu li a {
+        .sf-menu  ul#header-menu li a {
                 display: block;
                 color: #999;
                 font-weight: bold;
@@ -136,20 +149,22 @@
                 padding: 6px 15px;
                 border-radius: 3px 3px 3px 3px;
         }
-                .navbar ul#header-menu li.active a {
+                .sf-menu  ul#header-menu li.active a {
                         color: #fff;
                         background-color: #222;
                 }
-        .navbar ul#header-menu li a:hover {
+        .sf-menu  ul#header-menu li a:hover {
                 background-color: #222;
                 text-decoration: none;
                 color: #fff;
         }
-        .navbar ul#header-menu b.caret {
+        .sf-menu ul#header-menu b.caret {
                 border-bottom-color: #fff;
             border-top-color: #fff;
                 margin-top: 4px;
         }
         
         .carousel-control { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 30px; line-height: 20px; }
+		
+		body {padding: 0px;}
 }
