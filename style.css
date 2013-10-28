@@ -95,8 +95,7 @@ select#UCFHBHeaderLinks {
 #home .bottom{margin-top: 16px; border-top: none;}
 
 #wrap {
-	margin: 0 auto 20px;
-	width: 1000px;
+	margin: auto;
 	background-color: #FFFFFF;
 	}
 
@@ -127,7 +126,7 @@ select#UCFHBHeaderLinks {
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}
 #header .social.menu.horizontal li:after{content: "";}
-#header .container {width: 1000px;}
+#header-inner {width: 1000px;}
 
 #menu-background{
 	background-color: #555555;
@@ -662,7 +661,7 @@ article h3, h4{margin-top: 20px;}
 #search-results .result-list .item h3 {margin: 0; line-height:24px;}
 #search-results .title{color: #EC651B;}
 #search-results h3{line-height: 24px;}
-.container {width: 100%;}
+.container {width: 1000px}
 .nav{font-size: 12px;}
 .nav-header{padding: 0px;}
 .nav-list li a:hover {background-color: #F5F5F5;}

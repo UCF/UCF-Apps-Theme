@@ -30,7 +30,7 @@
 		
 		body {padding: 0px;}
 		
-		#wrap { width: 100% };
+		.container { width: 100%; padding: 0 20px; }
 }
 
 @media (max-width: 767px) {
@@ -38,6 +38,7 @@
         #header h1 { width: 100%; clear: both; }
 		
 		#footer {margin-left: 10px;}
+		#search {display: none;}
         
         #home .description { margin-top: 10px; }
         
