@@ -48,17 +48,17 @@
 	</head>
 	<body class="<?=body_classes()?>">
         <div id="header-background" class="wide">
-            <div class="container">
-                <div class="row">
-                    <div id="header" class="span9">
-                        <h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
-                        <?php $options = get_option(THEME_OPTIONS_NAME);?>
-                    </div>
+			<div id="header" class="container">
+				<div class="row">
+					<div id="header" class="span9">
+						<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
+						<?php $options = get_option(THEME_OPTIONS_NAME);?>
+					</div>
 					<div id="search" class="span3">
 						<?php get_search_form();?>
 					</div>	
-                </div>
-            </div>
+				</div>
+			</div>
         </div>
 		<div id="wrap" class="clearfix shadow-container">
 			<div id="menu-background" class="wide">

@@ -127,6 +127,7 @@ select#UCFHBHeaderLinks {
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}
 #header .social.menu.horizontal li:after{content: "";}
+#header .container {width: 1000px;}
 
 #menu-background{
 	background-color: #555555;
@@ -141,7 +142,7 @@ select#UCFHBHeaderLinks {
 #header-menu.menu.horizontal{padding-top: 0;}
 #header-menu.menu.horizontal li:after{content: none;}
 
-#search {margin-top: 30px;}
+#search {margin-top: 20px;}
 
 #footer {
 	line-height: 14px; 
