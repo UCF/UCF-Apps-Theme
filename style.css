@@ -635,14 +635,6 @@ article h3, h4{margin-top: 20px;}
 }
 
 @media (max-width: 767px) {
-    #header-background,
-    #menu-background,
-    #home-description {
-        margin-left: -20px;
-        margin-right: -20px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
     #home .home-links .side-bar {
         border-right: none;
