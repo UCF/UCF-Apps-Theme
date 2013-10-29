@@ -30,7 +30,14 @@
 		
 		body {padding: 0px;}
 		
-		.container { width: 100%; padding: 0 20px; }
+		.container { width: 100%; }
+		
+		#wrap {padding: 0 20px;}
+
+
+		.sf-menu a {background-color: #1B1B1B;}
+		.sf-menu ul {background: none repeat scroll 0 0 #1B1B1B; box-shadow: 0;}
+		.sf-menu ul a {border-color: #1B1B1B;}		
 }
 
 @media (max-width: 767px) {
