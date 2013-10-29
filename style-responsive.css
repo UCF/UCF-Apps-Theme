@@ -28,21 +28,17 @@
         
         .ribbon { font-size: 0.78em; }
 		
-		body {padding: 0px;}
+		body {padding: 0px; }
 		
 		.container { width: 100%; }
 		
 		#wrap {padding: 0 20px;}
-
-
-		.sf-menu a {background-color: #1B1B1B;}
-		.sf-menu ul {background: none repeat scroll 0 0 #1B1B1B; box-shadow: 0;}
-		.sf-menu ul a {border-color: #1B1B1B;}		
+	
 }
 
 @media (max-width: 767px) {
         #header { margin-left: 0; }
-        #header h1 { width: 100%; clear: both; }
+        #header h1 { width: 100%; clear: both; font-size:28px; }
 		
 		#footer {margin-left: 10px;}
 		#search {display: none;}
@@ -122,16 +118,17 @@
         
         .alignright, .alignleft { max-width: 40%; }
 		
-		body {padding: 0px;}
+		body {background: none; background-color: #FFFFFF;}
 
 }
 
 @media (max-width: 479px) {
-        #header { padding-bottom: 0; }
+        #header { padding-bottom: 0; margin-top:0;}
         #header h1 { float: none; margin-bottom: 10px; margin-right: 0; line-height: 20px; }
-        #header h1 a { font-size: 22px; }
+        #header h1 a { font-size: 18px; }
         
         #header-menu { width: 100%; }
+		#header-inner {margin-left: 20px;}
 		
 		#footer { margin-left: 10px; }
 		
@@ -174,5 +171,8 @@
         
         .carousel-control { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 30px; line-height: 20px; }
 		
-		body {padding: 0px;}
+		#menu-background {background-color: #FFFFFF;}
+		.sf-menu a {background-color: #1B1B1B;}
+		.sf-menu ul {background: none repeat scroll 0 0 #1B1B1B; box-shadow: 0;}
+		.sf-menu ul a {border-color: #1B1B1B;}
 }
