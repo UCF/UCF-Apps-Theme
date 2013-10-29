@@ -16,7 +16,6 @@
         #UCFHBHeader div.UCFHBWrapper { width: 100%; }
         
         #header-menu { float: left; margin-left: 0; }
-		#header-inner { width: 100%;}
 		
 		#home .home-links .home-link {
         padding-left: 20px;
@@ -139,6 +138,8 @@
 		#footer { margin-left: 10px; }
 		
         .navbar  ul#header-menu li:last-child { margin-bottom: 20px; }
+		
+		.navbar-inner {background-color: #2C2C2C};
         
         .navbar  .menu {
                 padding: 0;

@@ -126,7 +126,6 @@ select#UCFHBHeaderLinks {
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}
 #header .social.menu.horizontal li:after{content: "";}
-#header-inner {width: 1000px;}
 
 #menu-background{
 	background-color: #555555;
@@ -144,9 +143,9 @@ select#UCFHBHeaderLinks {
 #search {margin-top: 20px;}
 
 #footer {
-	line-height: 14px; 
+	line-height: 1.5em; 
 	color: #9F9F9F; 
-	font-size: 11px; 
+	font-size: 12px; 
 	font-family: Helvetica, Arial, sans-serif; 
 	border-top: none; 
 	margin-left: auto; 

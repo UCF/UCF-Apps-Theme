@@ -11,30 +11,31 @@
 												<h4>Contact us</h4>
 												<?php if($options['organization_name']): ?>
 													<span class="footer-emphasize"><?= $options['organization_name']; ?></span>
-													<br />
-												<?php endif;?>
-												University of Central Florida<br />
-												<?php if ($options['organization_name'] and $options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
-													<?=$options['street_address'];?>
-													<br />
-													<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
-													<br />
-												<?php elseif($options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
-													<?=$options['street_address'];?>
-													<br />
-													<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
-													<br />
-												<?php endif;?>
-												<?php if($options['phone_number'] and $options['fax_number']): ?>
-													<br />Phone: <?=$options['phone_number'];?> | Fax: <?=$options['fax_number'];?>
-												<?php elseif($options['phone_number'] and !$options['fax_number']): ?>
-													<br /><?=$options['phone_number'];?>
-												<?php elseif(!$options['phone_number'] and $options['fax_number']): ?>
-													<br />Fax: <?=$options['fax_number'];?>
-												<?php endif; ?>
-												<?php if($options['site_contact']): ?>
-													<p><i class="icon-envelope icon-white"></i><a href="mailto:<?=$options['site_contact']?>">E-mail</a></p>
-												<?php endif; ?>								   
+													<p>
+														<?php endif;?>
+														University of Central Florida<br />
+														<?php if ($options['organization_name'] and $options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
+															<?=$options['street_address'];?>
+															<br />
+															<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
+															<br />
+														<?php elseif($options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
+															<?=$options['street_address'];?>
+															<br />
+															<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
+															<br />
+														<?php endif;?>
+														<?php if($options['phone_number'] and $options['fax_number']): ?>
+															Phone: <?=$options['phone_number'];?> | Fax: <?=$options['fax_number'];?>
+														<?php elseif($options['phone_number'] and !$options['fax_number']): ?>
+															Phone:<?=$options['phone_number'];?>
+														<?php elseif(!$options['phone_number'] and $options['fax_number']): ?>
+															Fax: <?=$options['fax_number'];?>
+														<?php endif; ?>
+														<?php if($options['site_contact']): ?>
+															<p><a href="mailto:<?=$options['site_contact']?>"><i class="icon-envelope icon-white"></i>E-mail: <?=$options['site_contact']?></a></p>
+														<?php endif; ?>	
+													</p>
 											</div>
 											<div class = "span1">
 											</div>
