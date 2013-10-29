@@ -134,7 +134,7 @@
         #header h1 { float: none; margin-bottom: 10px; margin-right: 0; margin-left: 20px; line-height: 20px; }
         #header h1 a { font-size: 18px; }
         
-        #header-menu { width: 100%; }
+        #header-menu { width: 100%; background-color:#2C2C2C;}
 		
 		#footer { margin-left: 10px; }
 		
@@ -158,11 +158,11 @@
                 font-weight: bold;
                 font-size: 13px;
                 padding: 6px 15px;
-                border-radius: 3px 3px 3px 3px;
+                border-radius: 0;
         }
                 .navbar  ul#header-menu li.active a {
                         color: #fff;
-                        background-color: #222;
+                        background-color: #1;
                 }
         .navbar  ul#header-menu li a:hover {
                 background-color: #222;
@@ -179,8 +179,8 @@
 		
 		#wrap {padding: 0 20px;}
 		#menu-background {background-color: #FFFFFF;}
-		.sf-menu a {background-color: #1B1B1B;}
-		.sf-menu ul {background: none repeat scroll 0 0 #1B1B1B; box-shadow: 0;}
-		.sf-menu ul a {border-color: #1B1B1B;}
+		.sf-menu a {background-color: #2C2C2C; border: 0;}
+		.sf-menu ul {background: none repeat scroll 0 0 #2C2C2C; box-shadow: 0;}
+		.sf-menu ul a {border-color: #2C2C2C;}
 		.shadow-container {box-shadow: none;}
 }
