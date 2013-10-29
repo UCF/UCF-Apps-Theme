@@ -627,26 +627,6 @@ article h3, h4{margin-top: 20px;}
 .document-list ul li.html {list-style-image: url('static/img/documents-html.png');}
 .document-list a {color: #000;}
 
-@media (max-width: 979px) and (min-width: 768px) {
-    #home .home-links .home-link {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-@media (max-width: 767px) {
-
-    #home .home-links .side-bar {
-        border-right: none;
-    }
-}
-
-@media (max-width: 480px) {
-    #menu-background {
-        background-color: #555555;
-    }
-}
-
 /* Bootstrap & Webcom-base overrides */
 .search-form .search-field {width: 150px;}
 #search-results .result-list {margin: auto;}
