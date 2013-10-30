@@ -139,7 +139,9 @@
 		
         .navbar  ul#header-menu li:last-child { margin-bottom: 20px; }
 		
-		.navbar-inner {background-color: #2C2C2C};
+		.navbar-inner {background-color: #2C2C2C}
+		.navbar-inverse {background-color: #2C2C2C; background-image:none;}
+		.btn-navbar {background-color: #2C2C2C; background-image: -moz-linear-gradient(center top, #333333,#222222);}
         
         .navbar  .menu {
                 padding: 0;
@@ -180,7 +182,7 @@
 		
 		#wrap {padding: 0 20px;}
 		#menu-background {background-color: #FFFFFF;}
-		.sf-menu a {background-color: #2C2C2C; border: 0;}
+		.sf-menu a {background-color: #2C2C2C; border: 0; height:30px; line-height:30px;}
 		.sf-menu ul {background: none repeat scroll 0 0 #2C2C2C; box-shadow: 0;}
 		.sf-menu ul a {border-color: #2C2C2C;}
 		.shadow-container {box-shadow: none;}
