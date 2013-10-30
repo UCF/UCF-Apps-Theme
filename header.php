@@ -63,13 +63,17 @@
 			<div class="container">
 				<div id="wrap" class="clearfix shadow-container">
 					<div id="menu-backgroud" class="wide">
-						<?=wp_nav_menu(array(
-							'theme_location' => 'header-menu',
-							'container' => 'false',
-							'menu_class' => 'sf-menu '.get_header_styles(),
-							'menu_id' => 'header-menu',
-							'walker' => new Bootstrap_Walker_Nav_Menu()
-							));
-						?>		
+						<div class="navbar">
+							<div class="navbar-inner">
+								<?=wp_nav_menu(array(
+									'theme_location' => 'header-menu',
+									'container' => 'false',
+									'menu_class' => 'nav '.get_header_styles(),
+									'menu_id' => 'header-menu',
+									'walker' => new Bootstrap_Walker_Nav_Menu()
+									));
+								?>		
+							</div>
+						</div>
 					</div>
 					
