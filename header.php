@@ -66,7 +66,7 @@
 						<?=wp_nav_menu(array(
 							'theme_location' => 'header-menu',
 							'container' => 'false',
-							'menu_class' => 'sf-menu'.get_header_styles(),
+							'menu_class' => 'sf-menu '.get_header_styles(),
 							'menu_id' => 'header-menu',
 							'walker' => new Bootstrap_Walker_Nav_Menu()
 							));
