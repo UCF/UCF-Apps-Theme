@@ -171,6 +171,9 @@ select#UCFHBHeaderLinks {
 	color: #FFC907;	
 	font-size: 13px;
 	}
+#footer p {
+	font-family: Helvetica, Arial, sans-serif;
+	}
 #footer a {
 	color: #9F9F9F; 
 	font-size: 13px; 

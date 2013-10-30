@@ -33,7 +33,7 @@
 															Fax: <?=$options['fax_number'];?>
 														<?php endif; ?>
 														<?php if($options['site_contact']): ?>
-															<p><a href="mailto:<?=$options['site_contact']?>"><i class="icon-envelope icon-white"></i>E-mail: <?=$options['site_contact']?></a></p>
+															<a href="mailto:<?=$options['site_contact']?>"><i class="icon-envelope icon-white"></i>E-mail: <?=$options['site_contact']?></a>
 														<?php endif; ?>	
 													</p>
 											</div>
