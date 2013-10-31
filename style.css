@@ -510,24 +510,138 @@ article h3, h4{margin-top: 20px;}
 .page-content {margin-bottom: 20px;}
 .row {margin-left: auto;}
 
+.menu, .menu * {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.menu {
+    line-height: 1;
+}
+.menu ul {
+    position: absolute;
+    top: -999em;
+    width: 200px;
+}
+.menu ul li {
+    width: 100%;
+}
+.menu li:hover {
+    visibility: inherit;
+}
+.menu li {
+    float: left;
+    position: relative;
+}
 .menu a {
     background-color: #555555;
     display: block;
     position: relative;
     transition: background 0.4s ease 0s;
+}
+.menu li:hover ul, .menu li.sfHover ul {
+    left: 0;
+    top: 50px;
+    z-index: 99;
+}
+ul.menu li:hover li ul, ul.menu li.sfHover li ul {
+    top: -999em;
+}
+ul.menu li li:hover ul, ul.menu li li.sfHover ul {
+    left: 180px;
+    top: 0;
+}
+.menu {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    float: left;
+}
+.menu a {
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     border-right: 1px solid rgba(0, 0, 0, 0.7);
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     padding: 0 20px;
-    text-decoration: none;	
+    text-decoration: none;
 }
-
+.menu li:first-child a {
+    border-left: medium none;
+}
 .menu a:hover {
-    color: #333333;
+    background-color: #FFC907;
+    color: #FFFFFF;
+}
+#navigation .menu > .current-menu-item > a, #navigation .menu > .current-menu-parent > a {
+    background-color: #FFC907;
+    color: #FFFFFF;
+}
+.menu ul {
+    background: none repeat scroll 0 0 #555555;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    padding: 0;
+}
+.menu ul a {
+    border-color: rgba(255, 255, 255, 0.08) -moz-use-text-color rgba(0, 0, 0, 0.7);
+    border-left: medium none;
+    border-right: medium none;
+    border-style: solid none;
+    border-width: 1px medium;
+    color: #999999;
+    height: auto;
+    line-height: 1.3em !important;
+    margin: 0;
+    padding: 12px 10px;
+}
+.menu ul li:first-child > a {
+    border-top: medium none;
+}
+.menu ul li:last-child > a {
+    border-bottom: medium none;
+}
+.menu ul ul a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+.menu ul ul li:last-child a {
+    border-bottom: medium none !important;
+}
+.menu ul ul, .menu ul ul li:first-child a {
+    border-top: medium none;
+}
+.menu a.sf-with-ul {
+    min-width: 1px;
+    padding-right: 2.25em;
+}
+.sf-sub-indicator {
+    background: url("images/nav-down-white.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 12px;
+    margin-top: -6px;
+    opacity: 0.8;
+    overflow: hidden;
+    position: absolute;
+    right: 0.75em;
+    text-indent: -999em;
+    top: 50%;
+    width: 12px;
+}
+a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-indicator, li:hover > a > .sf-sub-indicator, li.sfHover > a > .sf-sub-indicator {
+    opacity: 1;
+}
+.menu ul .sf-sub-indicator {
+    background: url("images/nav-right-white.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-top: -6px;
+    opacity: 0.8;
+    top: 50%;
+}
+.menu ul a:focus > .sf-sub-indicator, .menu ul a:hover > .sf-sub-indicator, .menu ul a:active > .sf-sub-indicator, .menu ul li:hover > a > .sf-sub-indicator, .menu ul li.sfHover > a > .sf-sub-indicator {
+    opacity: 1;
+}
+.menu .no-text > a {
+    background-position: center center !important;
+    text-indent: -9999px;
 }
 
 
