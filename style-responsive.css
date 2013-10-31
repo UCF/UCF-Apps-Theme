@@ -138,9 +138,10 @@
 		#footer { margin-left: 10px; }
 		
         .navbar  ul#header-menu li:last-child { margin-bottom: 20px; }
-		.navbar-inner {background-color: #2C2C2C; background-image:none;}
-		.navbar-inverse {background-color: #2C2C2C; background-image:none; border-radius:4px;}
+		.navbar-inverse {border-radius:4px;}
 		.btn-navbar {background-color: #2C2C2C; background-image: -moz-linear-gradient(center top, #333333,#222222);}
+		.navbar-inverse .navbar-inner {background-color: #2C2C2C;background-image: linear-gradient(to bottom, #333333, #222222);background-repeat: repeat-x;border-color: #252525;
+}		
         .navbar  .menu {padding: 0;}
         .navbar  ul#header-menu li:after {content: "";        }
         .navbar  ul#header-menu li, .navbar  ul#header-menu ul.dropdown-menu li {
@@ -175,7 +176,7 @@
 		#menu-background {background-color: #FFFFFF;}
 		.dropdown-menu .active > a, .dropdown-menu .active > a:hover {background-color: inherit; background-image: none;}
 		.menu {border-right:0;}
-		.menu a {background-color: #2C2C2C; border-style: none; height:30px; line-height:30px;}
+		.menu a {background-color: #transparent; border-style: none; height:30px; line-height:30px;}
 		.menu ul {background: none repeat scroll 0 0 #2C2C2C; box-shadow: 0; width:100%;}
 		.menu ul a {border-style: none;}
 		.shadow-container {box-shadow: none;}
