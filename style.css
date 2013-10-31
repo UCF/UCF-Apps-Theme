@@ -512,10 +512,15 @@ article h3, h4{margin-top: 20px;}
 .row {margin-left: auto;}
 
 /* overrides for header menu */
-.caret {border-top: 4p solid #FFFFFF;}
+.caret {border-top: 4px solid #FFFFFF;}
 .dropdown .caret {margin-top: 22px;}
 .menu.horizontal {padding:0;}
-.menu.horizontal .dropdown-menu {margin-top: 0};
+.menu.horizontal .dropdown-menu {margin-top: 0;}
+.menu.horizontal .dropdown.open .dropdown-toggle {color: #FFFFFF; background-color:#FFC907;}
+.dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+    background-color: #FFC907;
+    background-image: none;
+}
 .dropdown-menu {border-radius: 0;}
 .dropdown-menu .active {color:#FDDE60;}
 .dropdown-menu a:hover {color:#FDDE60;}
