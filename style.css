@@ -137,7 +137,6 @@ select#UCFHBHeaderLinks {
 	background-color: #555555;
 	width: 100%;
 	}
-#header-menu.menu.horizontal{padding-top: 10px; height: 40px; line-height: 40px;}
 #header-menu.menu.horizontal li:after{content: none;}
 
 #search {margin-top: 20px;}
@@ -341,7 +340,7 @@ article h1, h2, h3 {font-weight: 400; font-family: 'Georgia', Georgia, serif;}
 p{font-weight: 400; font-family: Georgia, serif;}
 article h2{margin-top: 10px;}
 article h3, h4{margin-top: 20px;}
-#header-menu.menu.horizontal li {margin-bottom: 5px; margin-right: 9px;}
+
 
 /* Shortcodes, various re-usable things with custom styles */
 .post-search-header-text { font-size: 11px !important; text-transform: uppercase; font-weight: bold; margin-left: 10px; margin-bottom: 5px; }
@@ -510,6 +509,10 @@ article h3, h4{margin-top: 20px;}
 .page-content {margin-bottom: 20px;}
 .row {margin-left: auto;}
 
+/* overrides for header menu */
+.caret {border-top: 4p solid #FFFFFF;}
+.dropdown .caret {margin-top: 22px}; 
+.menu.horizontal {padding:0;}
 .menu, .menu * {
     list-style: none outside none;
     margin: 0;
@@ -565,6 +568,7 @@ ul.menu li li:hover ul, ul.menu li li.sfHover ul {
     line-height: 50px;
     padding: 0 20px;
     text-decoration: none;
+	margin-right: 0;
 }
 .menu li:first-child a {
     border-left: medium none;
@@ -572,6 +576,7 @@ ul.menu li li:hover ul, ul.menu li li.sfHover ul {
 .menu a:hover {
     background-color: #FFC907;
     color: #FFFFFF;
+	text-decoration: none;
 }
 #navigation .menu > .current-menu-item > a, #navigation .menu > .current-menu-parent > a {
     background-color: #FFC907;
