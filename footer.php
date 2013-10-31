@@ -32,6 +32,7 @@
 														<?php elseif(!$options['phone_number'] and $options['fax_number']): ?>
 															Fax: <?=$options['fax_number'];?>
 														<?php endif; ?>
+															<br />
 														<?php if($options['site_contact']): ?>
 															<a href="mailto:<?=$options['site_contact']?>"><i class="icon-envelope icon-white"></i>E-mail: <?=$options['site_contact']?></a>
 														<?php endif; ?>	

@@ -188,6 +188,7 @@ select#UCFHBHeaderLinks {
 #footer .info a{line-height: 1.5em; text-align: right; font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif"; font-weight: normal; font-size: 14px;}
 #footer .info .copyright{margin-top: 1em;}
 #footer .footer-emphasize {font-weight: bold; color:#FCD057}
+#footer .logo {padding: 50px;}
 #footer h4 {
 	border-bottom: 1px solid #FFFFFF;
 	color: #FFFFFF;
@@ -195,6 +196,7 @@ select#UCFHBHeaderLinks {
 	margin: 0 0 15px;
 	padding-bottom: 5px
 }
+
 #sidebar {margin-right: 10px;}
 #sidebar h2 {border-bottom: 1px solid;color: #555555; margin: 1em 0 0.5em; line-height: 24px;}
 #sidebar ul {margin: auto;}
@@ -511,8 +513,12 @@ article h3, h4{margin-top: 20px;}
 
 /* overrides for header menu */
 .caret {border-top: 4p solid #FFFFFF;}
-.dropdown .caret {margin-top: 22px}; 
+.dropdown .caret {margin-top: 22px;}
 .menu.horizontal {padding:0;}
+.menu.horizontal .dropdown-menu {margin-top: 0};
+.dropdown-menu {border-radius: 0;}
+.dropdown-menu .active {color:#FDDE60;}
+.dropdown-menu a:hover {color:#FDDE60;}
 .menu, .menu * {
     list-style: none outside none;
     margin: 0;
