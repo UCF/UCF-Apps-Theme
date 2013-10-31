@@ -578,7 +578,7 @@ function bootstrap_menus() {
             // continue with normal behavior
             return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
         }        
-    
+    }
 }
 add_action( 'after_setup_theme', 'bootstrap_menus' );
 
