@@ -67,9 +67,8 @@
 							<div class="navbar-inner">
 								<?=wp_nav_menu(array(
 									'theme_location' => 'header-menu',
-									'container' => 'div',
-									'container_class' => 'nav-collapse collapse',
-									'menu_class' => 'nav '.get_header_styles(),
+									'container' => 'false',
+									'menu_class' => 'menu '.get_header_styles(),
 									'menu_id' => 'header-menu',
 									'walker' => new Bootstrap_Walker_Nav_Menu()
 									));

@@ -455,132 +455,271 @@ function indent($html, $n){
  * based on https://gist.github.com/1597994
  **/
 function bootstrap_menus() {
-    /* Bootstrap_Walker for Wordpress
-     * Author: George Huger, Illuminati Karate, Inc
-     * More Info: http://illuminatikarate.com/blog/bootstrap-walker-for-wordpress
-     *
-     * Formats a Wordpress menu to be used as a Bootstrap dropdown menu (http://getbootstrap.com).
-     *
-     * Specifically, it makes these changes to the normal Wordpress menu output to support Bootstrap:
-     *
-     *        - adds a 'dropdown' class to level-0 <li>'s which contain a dropdown
-     *         - adds a 'dropdown-submenu' class to level-1 <li>'s which contain a dropdown
-     *         - adds the 'dropdown-menu' class to level-1 and level-2 <ul>'s
-     *
-     * Supports menus up to 3 levels deep.
-     * 
-     */
-	class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
-    
- 
-        /* Start of the <ul>
+        class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
+
+                        
+                        function start_lvl( &$output, $depth ) {
+
+                                $indent = str_repeat( "\t", $depth );
+                                $output           .= "\n$indent<ul class=\"dropdown-menu\">\n";
+                                
+                        }
+
+                        function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+                                
+                                $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
+                                $li_attributes = '';
+                                $class_names = $value = '';
+
+                                $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+                                $classes[] = ($args->has_children) ? 'dropdown' : '';
+                                $classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';
+                                $classes[] = 'menu-item-' . $item->ID;
+
+
+                                $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+                                $class_names = ' class="' . esc_attr( $class_names ) . '"';
+
+                                $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+                                $id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
+
+                                $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
+
+                                $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+                                $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+                                $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+                                $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+                                $attributes .= ($args->has_children)             ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
+
+                                $item_output = $args->before;
+                                $item_output .= '<a'. $attributes .'>';
+                                $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+                                $item_output .= ($args->has_children) ? ' <b class="caret"></b></a>' : '</a>';
+                                $item_output .= $args->after;
+
+                                $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+                        }
+
+                        function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+                                
+                                if ( !$element )
+                                        return;
+                                
+                                $id_field = $this->db_fields['id'];
+
+                                //display this element
+                                if ( is_array( $args[0] ) ) 
+                                        $args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
+                                else if ( is_object( $args[0] ) ) 
+                                        $args[0]->has_children = ! empty( $children_elements[$element->$id_field] ); 
+                                $cb_args = array_merge( array(&$output, $element, $depth), $args);
+                                call_user_func_array(array(&$this, 'start_el'), $cb_args);
+
+                                $id = $element->$id_field;
+
+                                // descend only when the depth is right and there are childrens for this element
+                                if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
+
+                                        foreach( $children_elements[ $id ] as $child ){
+
+                                                if ( !isset($newlevel) ) {
+                                                        $newlevel = true;
+                                                        //start the child delimiter
+                                                        $cb_args = array_merge( array(&$output, $depth), $args);
+                                                        call_user_func_array(array(&$this, 'start_lvl'), $cb_args);
+                                                }
+                                                $this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
+                                        }
+                                                unset( $children_elements[ $id ] );
+                                }
+
+                                if ( isset($newlevel) && $newlevel ){
+                                        //end the child delimiter
+                                        $cb_args = array_merge( array(&$output, $depth), $args);
+                                        call_user_func_array(array(&$this, 'end_lvl'), $cb_args);
+                                }
+
+                                //end this element
+                                $cb_args = array_merge( array(&$output, $element, $depth), $args);
+                                call_user_func_array(array(&$this, 'end_el'), $cb_args);
+                                
+                        }
+                        
+                }        
+                
+                /**
+ * Class Name: wp_bootstrap_navwalker
+ * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
+ * Description: A custom WordPress nav walker class to implement the Twitter Bootstrap 2.3.2 navigation style in a custom theme using the WordPress built in menu manager.
+ * Version: 1.4
+ * Author: Edward McIntyre - @twittem
+ * License: GPL-2.0+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ */
+
+class wp_bootstrap_navwalker extends Walker_Nav_Menu {
+
+        /**
+         * @see Walker::start_lvl()
+         * @since 3.0.0
          *
-         * Note on $depth: Counterintuitively, $depth here means the "depth right before we start this menu". 
-         *                   So basically add one to what you'd expect it to be
-         */        
-        function start_lvl(&$output, $depth)
-        {
-            $tabs = str_repeat("\t", $depth);
-            // If we are about to start the first submenu, we need to give it a dropdown-menu class
-            if ($depth == 0 || $depth == 1) { //really, level-1 or level-2, because $depth is misleading here (see note above)
-                $output .= "\n{$tabs}<ul class=\"dropdown-menu\">\n";
-            } else {
-                $output .= "\n{$tabs}<ul>\n";
-            }
-            return;
-        }
- 
-        /* End of the <ul>
-         *
-         * Note on $depth: Counterintuitively, $depth here means the "depth right before we start this menu". 
-         *                   So basically add one to what you'd expect it to be
-         */        
-        function end_lvl(&$output, $depth) 
-        {
-            if ($depth == 0) { // This is actually the end of the level-1 submenu ($depth is misleading here too!)
- 
-                // we don't have anything special for Bootstrap, so we'll just leave an HTML comment for now
-                $output .= '<!--.dropdown-->';
-            }
-            $tabs = str_repeat("\t", $depth);
-            $output .= "\n{$tabs}</ul>\n";
-            return;
-        }
- 
-        /* Output the <li> and the containing <a>
-         * Note: $depth is "correct" at this level
-         */        
-        function start_el(&$output, $item, $depth, $args) 
-        {    
-            global $wp_query;
-            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-            $class_names = $value = '';
-            $classes = empty( $item->classes ) ? array() : (array) $item->classes;
- 
-            /* If this item has a dropdown menu, add the 'dropdown' class for Bootstrap */
-            if ($item->hasChildren) {
-                $classes[] = 'dropdown';
-                // level-1 menus also need the 'dropdown-submenu' class
-                if($depth == 1) {
-                    $classes[] = 'dropdown-submenu';
-                }
-            }
- 
-            /* This is the stock Wordpress code that builds the <li> with all of its attributes */
-            $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-            $class_names = ' class="' . esc_attr( $class_names ) . '"';
-            $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';            
-            $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-            $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-            $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-            $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-            $item_output = $args->before;
- 
-            /* If this item has a dropdown menu, make clicking on this link toggle it */
-            if ($item->hasChildren && $depth == 0) {
-                $item_output .= '<a'. $attributes .' class="dropdown-toggle" data-toggle="dropdown">';
-            } else {
-                $item_output .= '<a'. $attributes .'>';
-            }
- 
-            $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
- 
-            /* Output the actual caret for the user to click on to toggle the menu */            
-            if ($item->hasChildren && $depth == 0) {
-                $item_output .= '<b class="caret"></b></a>';
-            } else {
-                $item_output .= '</a>';
-            }
- 
-            $item_output .= $args->after;
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-            return;
-        }
- 
-        /* Close the <li>
-         * Note: the <a> is already closed
-         * Note 2: $depth is "correct" at this level
-         */        
-        function end_el (&$output, $item, $depth, $args)
-        {
-            $output .= '</li>';
-            return;
-        }
- 
-        /* Add a 'hasChildren' property to the item
-         * Code from: http://wordpress.org/support/topic/how-do-i-know-if-a-menu-item-has-children-or-is-a-leaf#post-3139633 
+         * @param string $output Passed by reference. Used to append additional content.
+         * @param int $depth Depth of page. Used for padding.
          */
-        function display_element ($element, &$children_elements, $max_depth, $depth = 0, $args, &$output)
-        {
-            // check whether this item has children, and set $item->hasChildren accordingly
-            $element->hasChildren = isset($children_elements[$element->ID]) && !empty($children_elements[$element->ID]);
- 
-            // continue with normal behavior
-            return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
-        }        
-    }
+        function start_lvl( &$output, $depth ) {
+                $indent = str_repeat( "\t", $depth );
+                $output           .= "\n$indent<ul class=\"dropdown-menu\">\n";                
+        }
+
+        /**
+         * @see Walker::start_el()
+         * @since 3.0.0
+         *
+         * @param string $output Passed by reference. Used to append additional content.
+         * @param object $item Menu item data object.
+         * @param int $depth Depth of menu item. Used for padding.
+         * @param int $current_page Menu item ID.
+         * @param object $args
+         */
+
+        function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+                global $wp_query;
+                $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
+                /**
+                 * Dividers & Headers
+             * ==================
+                 * Determine whether the item is a Divider, Header, or regular menu item.
+                 * To prevent errors we use the strcasecmp() function to so a comparison
+                 * that is not case sensitive. The strcasecmp() function returns a 0 if 
+                 * the strings are equal.
+                 */
+                if (strcasecmp($item->title, 'divider') == 0) {
+                        // Item is a Divider
+                        $output .= $indent . '<li class="divider">';
+                } else if (strcasecmp($item->title, 'nav-header') == 0) {
+                        // Item is a Header
+                        $output .= $indent . '<li class="nav-header">' . esc_attr( $item->attr_title );
+                } else {
+
+                        $class_names = $value = '';
+                        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+                        $classes[] = ($item->current) ? 'active' : '';
+                        $classes[] = 'menu-item-' . $item->ID;
+                        $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+
+                        if ($args->has_children && $depth > 0) {
+                                $class_names .= ' dropdown-submenu';
+                        } else if($args->has_children && $depth === 0) {
+                                $class_names .= ' dropdown';
+                        }
+
+                        $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+                        $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+                        $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+
+                        $output .= $indent . '<li' . $id . $value . $class_names .'>';
+
+                        $attributes = ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+                        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+                        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+                        $attributes .= ($args->has_children)             ? ' data-toggle="dropdown" data-target="#" class="dropdown-toggle"' : '';
+
+                        $item_output = $args->before;
+
+                        /**
+                         * Glyphicons
+                         * ===========
+                         * Since the the menu item is NOT a Divider or Header we check the see
+                         * if there is a value in the attr_title property. If the attr_title
+                         * property is NOT null we apply it as the class name for the glyphicon.
+                         */
+                        if(! empty( $item->attr_title )){
+                                $item_output .= '<a'. $attributes .'><i class="' . esc_attr( $item->attr_title ) . '"></i>&nbsp;';
+                        } else {
+                                $item_output .= '<a'. $attributes .'>';
+                        }
+
+                        $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+                        $item_output .= ($args->has_children && $depth == 0) ? ' <span class="caret"></span></a>' : '</a>';
+                        $item_output .= $args->after;
+
+                        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+                }
+        }
+
+
+        /**
+         * Traverse elements to create list from elements.
+         *
+         * Display one element if the element doesn't have any children otherwise,
+         * display the element and its children. Will only traverse up to the max
+         * depth and no ignore elements under that depth. 
+         *
+         * This method shouldn't be called directly, use the walk() method instead.
+         *
+         * @see Walker::start_el()
+         * @since 2.5.0
+         *
+         * @param object $element Data object
+         * @param array $children_elements List of elements to continue traversing.
+         * @param int $max_depth Max depth to traverse.
+         * @param int $depth Depth of current element.
+         * @param array $args
+         * @param string $output Passed by reference. Used to append additional content.
+         * @return null Null on failure with no changes to parameters.
+         */
+
+        function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+
+                if ( !$element ) {
+                        return;
+                }
+
+                $id_field = $this->db_fields['id'];
+
+                //display this element
+                if ( is_array( $args[0] ) ) 
+                        $args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
+                else if ( is_object( $args[0] ) ) 
+                        $args[0]->has_children = ! empty( $children_elements[$element->$id_field] ); 
+                $cb_args = array_merge( array(&$output, $element, $depth), $args);
+                call_user_func_array(array(&$this, 'start_el'), $cb_args);
+
+                $id = $element->$id_field;
+
+                // descend only when the depth is right and there are childrens for this element
+                if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
+
+                        foreach( $children_elements[ $id ] as $child ){
+
+                                if ( !isset($newlevel) ) {
+                                        $newlevel = true;
+                                        //start the child delimiter
+                                        $cb_args = array_merge( array(&$output, $depth), $args);
+                                        call_user_func_array(array(&$this, 'start_lvl'), $cb_args);
+                                }
+                                $this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
+                        }
+                                unset( $children_elements[ $id ] );
+                }
+
+                if ( isset($newlevel) && $newlevel ){
+                        //end the child delimiter
+                        $cb_args = array_merge( array(&$output, $depth), $args);
+                        call_user_func_array(array(&$this, 'end_lvl'), $cb_args);
+                }
+
+                //end this element
+                $cb_args = array_merge( array(&$output, $element, $depth), $args);
+                call_user_func_array(array(&$this, 'end_el'), $cb_args);
+        }
+}
 }
 add_action( 'after_setup_theme', 'bootstrap_menus' );
+
 
 
 /**
