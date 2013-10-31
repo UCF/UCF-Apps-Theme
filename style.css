@@ -516,8 +516,12 @@ article h3, h4{margin-top: 20px;}
 .dropdown .caret {margin-top: 22px;}
 .menu.horizontal {padding:0;}
 .menu.horizontal .dropdown-menu {margin-top: 0;}
-.menu.horizontal .dropdown.open .dropdown-toggle {color: #FFFFFF; background-color:#FFC907;}
+.menu.horizontal .dropdown.open .dropdown-toggle {color: #FFFFFF;}
 .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+    background-color: #FFC907;
+    background-image: none;
+}
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
     background-color: #FFC907;
     background-image: none;
 }
