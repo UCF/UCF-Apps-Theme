@@ -60,8 +60,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				<div id="wrap" class="clearfix shadow-container">
+			<div class="container shadow-container">
+				<div id="wrap" class="clearfix">
 					<div id="menu-background" class="wide">
 							<?=wp_nav_menu(array(
 								'theme_location' => 'header-menu',

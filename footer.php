@@ -26,7 +26,7 @@
 															<br />
 														<?php endif;?>
 														<?php if($options['phone_number'] and $options['fax_number']): ?>
-															Phone: <?=$options['phone_number'];?> | Fax: <?=$options['fax_number'];?>
+															Phone: <?=$options['phone_number'];?> <br /> Fax: <?=$options['fax_number'];?>
 														<?php elseif($options['phone_number'] and !$options['fax_number']): ?>
 															Phone:<?=$options['phone_number'];?>
 														<?php elseif(!$options['phone_number'] and $options['fax_number']): ?>
@@ -58,7 +58,7 @@
 											</div>
 											<div class = "span1">
 											</div>
-											<div class = "span3">								
+											<div class = "span3 logo">								
 												<a class="ignore-external" href="http://www.ucf.edu"><img id="footer-logo" src="<?=THEME_IMG_URL?>/50th-220x80.png" alt="" title="" /></a>
 											</div>	
 
