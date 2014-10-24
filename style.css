@@ -335,7 +335,7 @@ li.centerpiece_single .slide_contents {
 .resourcelink-list .resource-link{display: block; background-color: #fff6d2; padding: 5px; margin-top: 5px;}
 .resourcelink-list a{ color: #000;}
 
-article h1, h2, h3 {font-weight: 400; font-family: 'Georgia', Georgia, serif;}
+article h1, h2, h3 {font-weight: 400;}
 p{font-weight: 400; font-family: Georgia, serif;}
 article h2{margin-top: 10px;}
 article h3, h4{margin-top: 20px;}
