@@ -196,21 +196,23 @@ select#UCFHBHeaderLinks {
 	margin: 0 0 15px;
 	padding-bottom: 5px
 }
-
-#textwidget {background:#dfdfdf;}
+#textwidget {padding: 3px 3px 3px 10px;}
 #sidebar {margin-right: 10px;}
-
 #sidebar h2 {
-    background: none repeat scroll 0 0 #dfdfdf;
-    border-radius: 5px 5px 0 0;
-    color: #555555;
+    background: none repeat scroll 0 0 #d06504;
+    color: #fff;
+    font-family: inherit;
+    font-weight: bold;
     line-height: 24px;
     margin: 1em 0 0.5em;
-    padding: 5px 5px 5px 10px;
+    padding: 3px 3px 3px 10px;
 }
+#sidebar h4 {
+	font-size: 15px;
+	}
 
 #sidebar ul {margin: auto;}
-#sidebar a {color: #EC651B};
+#sidebar a {color: #CC9900};
 #sidebar-nav {
 	background-color: #F5F5F5;
 	border: 1px solid #E3E3E3;
@@ -346,7 +348,7 @@ li.centerpiece_single .slide_contents {
 .resourcelink-list a{ color: #000;}
 
 article h1, h2, h3 {font-weight: 400;}
-p{font-weight: 400; font-family: Georgia, serif;}
+p{font-weight: 400; }
 article h2{margin-top: 10px;}
 article h3, h4{margin-top: 20px;}
 
@@ -569,10 +571,10 @@ ul.menu li:hover li ul, ul.menu li.sfHover li ul {
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     border-right: 1px solid rgba(0, 0, 0, 0.7);
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     padding: 0 20px;
     text-decoration: none;
 	margin-right: 0;
