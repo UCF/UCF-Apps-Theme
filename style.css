@@ -124,8 +124,8 @@ select#UCFHBHeaderLinks {
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}
 #header .social.menu.horizontal li:after{content: "";}
-#header h1 a {color: #000;font-weight: 400; font-family: "Helvetica Neue","Helvetica,Arial,sans-serif"; }
-#header h1 a:hover {color: #fff;}
+#header h1 a {color: #000;font-weight: 400;}
+#header h1 a:hover {color: #fff; text-decoration:none;}
 
 #menu-background{
 	background-color: #555555;
@@ -198,8 +198,10 @@ select#UCFHBHeaderLinks {
 }
 #textwidget {padding: 3px 3px 3px 10px;}
 #sidebar {margin-right: 10px;}
+
 #sidebar h2 {
     background: none repeat scroll 0 0 #d06504;
+    box-shadow: 1px 1px 2px #acacac;
     color: #fff;
     font-family: inherit;
     font-weight: bold;
@@ -580,12 +582,12 @@ ul.menu li:hover li ul, ul.menu li.sfHover li ul {
 	margin-right: 0;
 }
 .menu a:hover {
-    background-color: #FFC907;
+    background-color: #FFD43D;
     color: #FFFFFF;
 	text-decoration: none;
 }
 #navigation .menu > .current-menu-item > a, #navigation .menu > .current-menu-parent > a {
-    background-color: #FFC907;
+    background-color: #FFD43D;
     color: #FFFFFF;
 }
 .menu ul {
