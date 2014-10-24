@@ -11,9 +11,6 @@
 						<?=get_breadcrumbs($post->ID)?> 
 					 </article> 
 				</div>
-				<div id="sidebar" class="span3">
-					<?=get_sidebar();?> 
-				</div>
 				<div class="span9">
 					<article>
 						<? if(!is_front_page())	{ ?>
@@ -27,7 +24,9 @@
 						<?php the_content();?>
 					</article>
 				</div>
-
+				<div id="sidebar" class="span3">
+					<?=get_sidebar();?> 
+				</div>
 			</div>
 
 <?php get_footer();?>

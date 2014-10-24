@@ -124,7 +124,7 @@ select#UCFHBHeaderLinks {
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}
 #header .social.menu.horizontal li:after{content: "";}
-#header h1 a {color: #000;font-weight: 400; font-family: "Arial"; }
+#header h1 a {color: #000;font-weight: 400; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif"; }
 #header h1 a:hover {color: #fff;}
 
 #menu-background{
