@@ -124,7 +124,7 @@ select#UCFHBHeaderLinks {
 #header .social{}
 #header .social.menu.horizontal a{text-indent: -1024px;}
 #header .social.menu.horizontal li:after{content: "";}
-#header h1 a {color: #FFF;font-weight: 400; font-family: 'Georgia', Georgia, serif;}
+#header h1 a {color: #000;font-weight: 400; font-family: "Arial"; }
 #header h1 a:hover {color: #fff;}
 
 #menu-background{
@@ -197,8 +197,18 @@ select#UCFHBHeaderLinks {
 	padding-bottom: 5px
 }
 
+#textwidget {background:#dfdfdf;}
 #sidebar {margin-right: 10px;}
-#sidebar h2 {border-bottom: 1px solid;color: #555555; margin: 1em 0 0.5em; line-height: 24px;}
+
+#sidebar h2 {
+    background: none repeat scroll 0 0 #dfdfdf;
+    border-radius: 5px 5px 0 0;
+    color: #555555;
+    line-height: 24px;
+    margin: 1em 0 0.5em;
+    padding: 5px 5px 5px 10px;
+}
+
 #sidebar ul {margin: auto;}
 #sidebar a {color: #EC651B};
 #sidebar-nav {
