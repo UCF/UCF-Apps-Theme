@@ -115,7 +115,6 @@ select#UCFHBHeaderLinks {
 
 #header-background {
     background-color: rgba(30, 30, 30, 0.45);
-    box-shadow: 0 5px 10px #acacac;
     margin: 0 auto 30px;
     position: relative;
 }
