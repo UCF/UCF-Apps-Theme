@@ -7,7 +7,7 @@
 										<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
 											<?php $options = get_option(THEME_OPTIONS_NAME);?>
 											
-											<div class = "span10">
+											<div>
 												<?php 
 													if (has_nav_menu('footer-menu')) { ?>
 														<?=wp_nav_menu(array(
@@ -21,7 +21,7 @@
 															));
 													}   ?>		
 
-												© 2014 University of Central Florida, All Rights Reserved	
+												<p>© 2014 University of Central Florida, All Rights Reserved</p>
 											</div>
 
 
