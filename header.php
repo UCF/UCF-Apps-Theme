@@ -51,7 +51,7 @@
 				<div id="header" class="container">
 					<div class="row">
 						<div class="span9">
-							<h1><a href="<?=bloginfo('url')?>"><?=bloginfo('name')?></a></h1>
+							<h1><a href="<?=bloginfo('url')?>">UCF <span class="alt-color">Apps</span></a></h1>
 							<?php $options = get_option(THEME_OPTIONS_NAME);?>
 						</div>
 						<div id="search" class="span3">

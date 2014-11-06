@@ -1,4 +1,4 @@
-SMCA-Dept-Theme
+UCF-Apps-Theme
 ===============
 
-Department Template for SMCA sites
+Theme for the UCF Apps information site.

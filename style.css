@@ -627,6 +627,8 @@ ul.menu li:hover li ul, ul.menu li.sfHover li ul {
     text-indent: -9999px;
 }
 
-
+.alt-color {
+color: #FFC904;
+}
 
 
