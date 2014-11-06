@@ -157,22 +157,18 @@ select#UCFHBHeaderLinks {
 	margin: auto;
     position: relative;
 	}
-#footer-menu {text-align: left;}
+#footer-menu {text-align: center;}
 #footer-menu .header {
 	text-decoration: underline; 
 	font-weight: bold; 
 	color:#FCD057
 	}
 #footer-menu li {
-	text-align: left; 
 	font-size: 13px;
-	diplay: inline-block;
+	display: inline-block;
 	margin: 0 5px;
 	}
-#footer-menu li:after {
-	content: "|";
-	margin-left: 2px;
-}
+
 #footer p {
 	font-family: Helvetica, Arial, sans-serif;
 	}
@@ -182,6 +178,10 @@ select#UCFHBHeaderLinks {
 	font-family: Helvetica, Arial, sans-serif;
 	vertical-align: text-bottom;
 	}
+#footer a:hover {
+	text-decoration:none;
+	color: #FFC904;
+}
 #footer-widget-wrap { 
 	margin-top: 16px; 
 	margin-bottom: 16px;
