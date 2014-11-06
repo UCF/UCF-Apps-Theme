@@ -7,60 +7,23 @@
 										<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>
 											<?php $options = get_option(THEME_OPTIONS_NAME);?>
 											
-											<div class = "span3">
-												<h4>Contact us</h4>
-												<?php if($options['organization_name']): ?>
-													<span class="footer-emphasize"><?= $options['organization_name']; ?></span>
-													<p>
-														<?php endif;?>
-														University of Central Florida<br />
-														<?php if ($options['organization_name'] and $options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
-															<?=$options['street_address'];?>
-															<br />
-															<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
-															<br />
-														<?php elseif($options['street_address'] and $options['city_address'] and $options['state_address'] and $options['zip_address']): ?>
-															<?=$options['street_address'];?>
-															<br />
-															<?=$options['city_address'];?>, <?=$options['state_address'];?> <?=$options['zip_address'];?>
-															<br />
-														<?php endif;?>
-														<?php if($options['phone_number'] and $options['fax_number']): ?>
-															Phone: <?=$options['phone_number'];?> <br /> Fax: <?=$options['fax_number'];?>
-														<?php elseif($options['phone_number'] and !$options['fax_number']): ?>
-															Phone:<?=$options['phone_number'];?>
-														<?php elseif(!$options['phone_number'] and $options['fax_number']): ?>
-															Fax: <?=$options['fax_number'];?>
-														<?php endif; ?>
-															<br />
-														<?php if($options['site_contact']): ?>
-															<a href="mailto:<?=$options['site_contact']?>"><i class="icon-envelope icon-white"></i>E-mail: <?=$options['site_contact']?></a>
-														<?php endif; ?>	
-													</p>
+											<div class = "span10">
+												<?php 
+													if (has_nav_menu('footer-menu')) { ?>
+														<?=wp_nav_menu(array(
+															'theme_location' => 'footer-menu', 
+															'container' => 'false', 
+															'menu_class' => '', 
+															'menu_id' => 'footer-menu', 
+															'fallback_cb' => false,
+															'depth' => 1,
+															'walker' => new Bootstrap_Walker_Nav_Menu()
+															));
+													}   ?>		
+
+												© 2014 University of Central Florida, All Rights Reserved	
 											</div>
-											<div class = "span1">
-											</div>
-											<div class = "span3">
-											
-											<?php 
-												if (has_nav_menu('footer-menu')) { ?>
-													<h4>Useful Links</h4>
-													<?=wp_nav_menu(array(
-														'theme_location' => 'footer-menu', 
-														'container' => 'false', 
-														'menu_class' => '', 
-														'menu_id' => 'footer-menu', 
-														'fallback_cb' => false,
-														'depth' => 1,
-														'walker' => new Bootstrap_Walker_Nav_Menu()
-														));
-												}   ?>
-											</div>
-											<div class = "span1">
-											</div>
-											<div class = "span3 logo">								
-												
-											</div>	
+
 
 										<?php endif;?>
 									

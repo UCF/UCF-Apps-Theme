@@ -1,5 +1,5 @@
 /*   
-Theme Name: SMCA Department Theme
+Theme Name: UCF Apps Theme
 Author: SMCA Technology Services
 Github Theme URI: https://github.com/UCF/SMCA-Dept-Theme.git
 Version: v2.0.0
@@ -165,10 +165,14 @@ select#UCFHBHeaderLinks {
 	}
 #footer-menu li {
 	text-align: left; 
-	list-style: square;
-	color: #FFC907;	
 	font-size: 13px;
+	diplay: inline-block;
+	margin: 0 5px;
 	}
+#footer-menu li:after {
+	content: "|";
+	margin-left: 2px;
+}
 #footer p {
 	font-family: Helvetica, Arial, sans-serif;
 	}
