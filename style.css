@@ -218,7 +218,7 @@ select#UCFHBHeaderLinks {
 	font-size: 15px;
 	}
 
-#sidebar ul {margin: auto;}
+#sidebar ul {margin: 15px; list-style: initial; font-size: smaller;}
 #sidebar a {color: #CC9900};
 #sidebar-nav {
 	background-color: #F5F5F5;
@@ -229,6 +229,7 @@ select#UCFHBHeaderLinks {
     min-height: 20px;
     padding: 19px;
 }
+#sidebar .widget ul {margin: auto; list-style-type: none; padding: 0;}
 
 #navigation {
     background-color: #2B2B2B;
