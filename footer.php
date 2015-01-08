@@ -1,7 +1,19 @@
 				</div>
 				<div id = "footer-background">	
 						<div id="footer" class="container">
-							<div id="footer-widget-wrap" class="clearfix">
+							<div id="footer-widget-wrap" class="clearfix">																<div class="row">
+								<div class="span2 offset4">
+										<a href="https://play.google.com/store/apps/details?id=com.citrix.Receiver" alt="Download for Android">
+											<img src="<?php echo THEME_IMG_URL; ?>/en_app_rgb_and_45.png" alt="android" class="img-thumbnail img-responsive" />
+										</a>
+									</div>
+									<div class="span2">
+										<a href="https://itunes.apple.com/us/app/citrix-receiver/id363501921" alt="Download for iOS">
+											<img src="<?php echo THEME_IMG_URL; ?>/en_app_rgb_ios_45.png" alt="ios" class="img-thumbnail img-responsive" />
+										</a>
+									</div>
+								</div>
+								<br />
 								<div class="row">
 									
 										<?php if(!function_exists('dynamic_sidebar') or !dynamic_sidebar('Footer - Column Two')):?>

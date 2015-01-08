@@ -40,9 +40,6 @@ function get_breadcrumbs($post_id) {
 	return $output;
 }
 
-?>
-
-<?php
 /*
 Plugin Name: Category Checklist Tree
 Version: 1.3.1
